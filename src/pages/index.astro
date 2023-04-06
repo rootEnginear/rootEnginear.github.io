@@ -16,11 +16,13 @@ import RandomFacts from "../sections/random-facts.astro";
   description="My expertise is about crafting pixel-perfect websites from designs. With my experiences, I'm ready to take challenges and make exquisite websites for people."
 >
   <header
-    class="flex h-screen flex-col items-start justify-between p-16 md:fixed md:inset-0 md:right-auto md:p-32"
+    class="z-10 flex h-screen flex-col items-start justify-between p-16 md:fixed md:inset-0 md:right-auto md:p-32"
   >
     <div>
       <div class="text-sm text-gray-400" aria-hidden="true">name & position</div>
-      <h1 class="text-4xl font-bold md:mb-8 md:text-5xl">Suthep Chanchuphol</h1>
+      <h1 class="bg-gray-900 text-4xl font-bold md:mb-8 md:text-5xl">
+        Suthep Chanchuphol
+      </h1>
       <p>
         <img
           class="inline-block align-baseline"
@@ -93,6 +95,12 @@ import RandomFacts from "../sections/random-facts.astro";
       </div>
       <menu class="text-sm md:text-base">
         <li class="w-max bg-gray-900 md:ml-auto"><a href="/">Home</a></li>
+        <li class="w-max bg-gray-900 md:ml-auto">
+          <a href="https://rootenginear.gitbook.io/blog/">Blog (Legacy)</a>
+        </li>
+        <li class="w-max bg-gray-900 md:ml-auto">
+          <a href="#other-projects">Projects</a>
+        </li>
       </menu>
     </nav>
     <nav class="flex flex-1 flex-col items-end md:justify-end">
@@ -129,7 +137,7 @@ import RandomFacts from "../sections/random-facts.astro";
   </main>
 
   <footer
-    class="mb-32 ml-16 max-w-[80ch] pt-32 md:mb-[30vh] md:ml-[364px] lg:ml-[564px] xl:mb-[20vh]"
+    class="mb-32 ml-16 max-w-[80ch] pr-16 pt-32 md:mb-[30vh] md:ml-[364px] md:pr-32 lg:ml-[564px] xl:mb-[20vh]"
   >
     Copyright &copy; {new Date().getFullYear()} Suthep Chanchuphol <span class="nobr"
       >All right reserved.</span
