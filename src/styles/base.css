@@ -26,10 +26,6 @@ html {
   @apply bg-gray-900 selection:bg-accent selection:text-black;
 }
 
-.ss01 {
-  font-feature-settings: "ss01", "ss04", "case", "zero";
-}
-
 a {
   @apply underline decoration-accent decoration-dashed decoration-1 underline-offset-2;
 }
