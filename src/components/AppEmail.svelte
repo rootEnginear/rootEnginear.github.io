@@ -6,7 +6,7 @@
   $: display_data = is_mounted
     ? is_revealing
       ? "suthep.chanchuphol@outlook.com"
-      : "Double click to show email."
+      : "Double click to show email"
     : "Waiting for hydration...";
 
   const reveal = () => {
