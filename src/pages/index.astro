@@ -3,7 +3,10 @@ import Layout from "../layouts/Layout.astro";
 import AppEmail from "../components/AppEmail.svelte";
 ---
 
-<Layout title="Suthep Chanchuphol — All about @rootEnginear">
+<Layout
+  title="Suthep Chanchuphol"
+  description="My expertise is about crafting pixel-perfect websites from designs. With my experiences, I'm ready to take challenges and make exquisite websites for people."
+>
   <header
     class="flex h-screen flex-col items-start justify-between p-16 md:fixed md:inset-0 md:right-auto md:p-32"
   >
@@ -11,6 +14,16 @@ import AppEmail from "../components/AppEmail.svelte";
       <div class="ss01 text-sm text-gray-500" aria-hidden="true">name & position</div>
       <h1 class="text-4xl font-bold md:mb-8 md:text-5xl">Suthep Chanchuphol</h1>
       <p>
+        <img
+          class="inline-block align-baseline"
+          src="./favicon-16x16.png"
+          srcset="./favicon-16x16.png 1x, ./favicon-32x32.png 2x"
+          alt=""
+          width="16"
+          height="16"
+          loading="eager"
+          decoding="async"
+        />
         Web Developer at <a
           href="https://punchup.world/"
           target="_blank"
@@ -20,10 +33,13 @@ import AppEmail from "../components/AppEmail.svelte";
     </div>
     <img
       class="aspect-square w-auto rounded-16 md:w-[300px] lg:w-[500px]"
-      src="profile.jpg"
+      src="./img/profile.webp"
+      srcset="./img/profile.webp 1x, ./img/profile@2x.webp 2x"
       alt=""
-      width="500"
-      height="500"
+      width="300"
+      height="300"
+      loading="eager"
+      decoding="async"
     />
     <div>
       <ul>
@@ -151,7 +167,8 @@ import AppEmail from "../components/AppEmail.svelte";
             class="underline"
             href="https://www.credly.com/badges/a27f9afe-1728-4784-abc8-4a97ee3b794b/public_url"
             target="_blank"
-            rel="nofollow noopener noreferrer">View on Credly</a>
+            rel="nofollow noopener noreferrer">View on Credly</a
+          >
         </footer>
       </article>
       <article>
@@ -173,7 +190,8 @@ import AppEmail from "../components/AppEmail.svelte";
             class="underline"
             href="https://www.facebook.com/ywcth/"
             target="_blank"
-            rel="nofollow noopener noreferrer">Visit event Facebook page</a>
+            rel="nofollow noopener noreferrer">Visit event Facebook page</a
+          >
         </footer>
       </article>
     </section>
