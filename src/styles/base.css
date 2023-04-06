@@ -8,11 +8,27 @@
 
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
 
-@layer base {
-  html {
-    font-feature-settings: "ss04", "case", "zero";
-    color-scheme: dark;
-  }
+*,
+::before,
+::after {
+  position: relative;
 }
+
+html {
+  font-feature-settings: "ss04", "case", "zero";
+  color-scheme: dark;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  @apply bg-gray-900;
+}
+
+a {
+  @apply underline decoration-dashed underline-offset-2 decoration-1;
+}
+
+.nobr {
+  white-space: nowrap;
+}
+
+@tailwind utilities;

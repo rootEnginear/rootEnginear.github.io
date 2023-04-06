@@ -2,13 +2,163 @@
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-  <main>
-    <h1 class="text-lg font-bold">Lorem Ipsum Dolor Sit Amet</h1>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore perspiciatis
-      possimus distinctio, molestias quibusdam eligendi totam autem quo doloremque est
-      ipsa. Sequi doloremque distinctio molestiae tempora dolore nesciunt nisi porro.
-    </p>
+<Layout title="Suthep Chanchuphol — All about @rootEnginear">
+  <header class="p-16 md:p-32 flex gap-16 h-screen">
+    <div class="flex-1 flex flex-col justify-between items-start">
+      <div>
+        <div class="text-sm text-gray-500">name & position</div>
+        <h1 class="text-5xl font-bold mb-8">Suthep Chanchuphol</h1>
+        <p>
+          Web Developer at <a
+            href="https://punchup.world/"
+            target="_blank"
+            rel="nofollow noopener noreferrer">Punch Up</a
+          >
+        </p>
+      </div>
+      <img
+        class="rounded-16 aspect-square max-h-[500px] w-auto"
+        src="profile.jpg"
+        alt=""
+        width="500"
+        height="500"
+      />
+      <div>
+        <ul>
+          <li>Bangkok, Thailand</li>
+          <!-- <li>Email</li> -->
+          <li>
+            <a
+              href="https://github.com/rootEnginear"
+              target="_blank"
+              rel="nofollow noopener noreferrer">GitHub</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/rootenginear/"
+              target="_blank"
+              rel="nofollow noopener noreferrer">LinkedIn</a
+            >
+          </li>
+        </ul>
+        <div class="text-sm text-gray-500">quick information</div>
+      </div>
+    </div>
+    <div class="flex flex-col justify-between text-right">
+      <nav>
+        <div class="text-sm text-gray-500">main navigation</div>
+        <menu>
+          <li><a href="/">Home</a></li>
+        </menu>
+      </nav>
+      <nav>
+        <menu>
+          <li>
+            <a href="#technological-skills">Technological Skills</a>
+          </li>
+          <li>
+            <a href="#work-experiences">Work Experiences</a>
+          </li>
+          <!-- <li>
+            <a href="#side-projects">Side Projects</a>
+          </li> -->
+          <!-- <li>
+            <a href="#achievements">Achievements</a>
+          </li> -->
+          <!-- <li>
+            <a href="#languages">Languages</a>
+          </li> -->
+          <!-- <li>
+            <a href="#education">Education</a>
+          </li> -->
+          <!-- <li>
+            <a href="#random-facts">Random Facts</a>
+          </li> -->
+        </menu>
+        <div class="text-sm text-gray-500">headings</div>
+      </nav>
+    </div>
+  </header>
+  <!-- max-w-[80ch] -->
+  <main class="p-16 md:p-32 border-l-[2px] border-l-white border-dashed ml-16 md:ml-32">
+    <section id="technological-skills" class="mb-16 md:mb-32">
+      <h2 class="text-4xl font-bold mb-8">Technological Skills</h2>
+      <div class="grid gap-16 grid-cols-2 md:grid-cols-4">
+        <div>
+          <h3 class="text-xl font-medium mb-4">Proficient</h3>
+          <ul class="list-disc ml-1rem">
+            <li>HTML & CSS</li>
+            <li>JavaScript</li>
+            <li>TypeScript</li>
+            <li>Svelte</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-medium mb-4">Experienced</h3>
+          <ul class="list-disc ml-1rem">
+            <li>Vue.js</li>
+            <li>React.js (Next.js)</li>
+            <li>SCSS</li>
+            <li>Git</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-medium mb-4">Familiar</h3>
+          <ul class="list-disc ml-1rem">
+            <li>Firebase</li>
+            <li>SQL, RDBMS (MySQL, MariaDB)</li>
+            <li>Node.js</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-medium mb-4">Other Interests</h3>
+          <ul class="list-disc ml-1rem">
+            <li>UI/UX</li>
+            <li>Artificial Intelligences</li>
+            <li>Quantum Computing</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section id="work-experiences">
+      <h2 class="text-4xl font-bold mb-8">Work Experiences</h2>
+      <div class="grid gap-16 grid-cols-2 md:grid-cols-4">
+        <div>
+          <h3 class="text-xl font-medium mb-4">Proficient</h3>
+          <ul class="list-disc ml-1rem">
+            <li>HTML & CSS</li>
+            <li>JavaScript</li>
+            <li>TypeScript</li>
+            <li>Svelte</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-medium mb-4">Experienced</h3>
+          <ul class="list-disc ml-1rem">
+            <li>Vue.js</li>
+            <li>React.js (Next.js)</li>
+            <li>SCSS</li>
+            <li>Git</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-medium mb-4">Familiar</h3>
+          <ul class="list-disc ml-1rem">
+            <li>Firebase</li>
+            <li>SQL, RDBMS (MySQL, MariaDB)</li>
+            <li>Node.js</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-medium mb-4">Other Interests</h3>
+          <ul class="list-disc ml-1rem">
+            <li>UI/UX</li>
+            <li>Artificial Intelligences</li>
+            <li>Quantum Computing</li>
+          </ul>
+        </div>
+      </div>
+    </section>
   </main>
 </Layout>
