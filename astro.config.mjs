@@ -6,7 +6,11 @@ import sitemap from "@astrojs/sitemap";
 export default defineConfig({
   site: "https://rootenginear.github.io",
   integrations: [
-    tailwind(),
+    tailwind({
+      config: {
+        applyBaseStyles: false,
+      },
+    }),
     sitemap({
       customPages: ["https://rootenginear.github.io/25th-parliament-meeting/"],
     }),
