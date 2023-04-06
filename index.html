@@ -39,7 +39,7 @@
     <meta name="twitter:data1" value="@Punch Up">
     <meta name="twitter:label2" value="LinkedIn">
     <meta name="twitter:data2" value="/in/rootEnginear">
-  <link rel="stylesheet" href="/_astro/index.88403fea.css" /></head>
+  <link rel="stylesheet" href="/_astro/index.fdced17f.css" /></head>
 
   <body>
     <style>astro-island,astro-slot{display:contents}</style><script>(self.Astro=self.Astro||{}).visible=(s,c,n)=>{const r=async()=>{await(await s())()};let i=new IntersectionObserver(e=>{for(const t of e)if(t.isIntersecting){i.disconnect(),r();break}});for(let e=0;e<n.children.length;e++){const t=n.children[e];i.observe(t)}},window.dispatchEvent(new Event("astro:visible"));var l;{const c={0:t=>t,1:t=>JSON.parse(t,o),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,o)),5:t=>new Set(JSON.parse(t,o)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(JSON.parse(t)),9:t=>new Uint16Array(JSON.parse(t)),10:t=>new Uint32Array(JSON.parse(t))},o=(t,s)=>{if(t===""||!Array.isArray(s))return s;const[e,n]=s;return e in c?c[e](n):void 0};customElements.get("astro-island")||customElements.define("astro-island",(l=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement&&this.parentElement.closest("astro-island[ssr]"))return;const s=this.querySelectorAll("astro-slot"),e={},n=this.querySelectorAll("template[data-astro-template]");for(const r of n){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(const r of s){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("name")||"default"]=r.innerHTML)}const a=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),o):{};this.hydrator(this)(this.Component,a,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((s,e)=>{e.disconnect(),this.childrenConnectedCallback()}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate);let s=this.getAttribute("before-hydration-url");s&&await import(s),this.start()}start(){const s=JSON.parse(this.getAttribute("opts")),e=this.getAttribute("client");if(Astro[e]===void 0){window.addEventListener(`astro:${e}`,()=>this.start(),{once:!0});return}Astro[e](async()=>{const n=this.getAttribute("renderer-url"),[a,{default:r}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),i=this.getAttribute("component-export")||"default";if(!i.includes("."))this.Component=a[i];else{this.Component=a;for(const d of i.split("."))this.Component=this.Component[d]}return this.hydrator=r,this.hydrate},s,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},l.observedAttributes=["props"],l))}</script><header class="z-10 flex h-screen flex-col items-start justify-between p-16 md:fixed md:inset-0 md:right-auto md:p-32">
@@ -55,7 +55,7 @@
     </div>
     <div>
       <img class="absolute top-4 aspect-square w-auto rounded-16 opacity-30 blur-lg md:w-[300px] lg:w-[500px]" src="./img/profile.webp" srcset="./img/profile.webp 1x, ./img/profile@2x.webp 2x" alt="" width="300" height="300" loading="eager" decoding="async">
-      <img class="aspect-square w-auto rounded-16 md:w-[300px] lg:w-[500px]" src="./img/profile.webp" srcset="./img/profile.webp 1x, ./img/profile@2x.webp 2x" alt="" width="300" height="300" loading="eager" decoding="async">
+      <img class="aspect-square w-auto rounded-16 md:w-[300px] lg:w-[500px]" src="./img/profile.webp" srcset="./img/profile.webp 1x, ./img/profile@2x.webp 2x" alt="" width="300" height="300" loading="eager" decoding="async" title="Howdy Poggers!">
     </div>
     <div>
       <ul>
@@ -151,8 +151,8 @@
   <p>*Boop* Coming Soon!</p>
 </section>
     <section id="achievements" class="mb-16 scroll-mt-[20vh] md:mb-32 md:scroll-mt-64">
-  <h2 class="mb-8 text-4xl font-bold">Achievements</h2>
-  <article class="mb-8">
+  <h2 class="mb-16 text-4xl font-bold">Achievements</h2>
+  <article class="mb-16">
     <h3 class="mb-4 text-xl font-medium">
       IBM Certified Associate Developer in Quantum Computation using Qiskit v0.2x
     </h3>
@@ -188,8 +188,60 @@
   </article>
 </section>
     <section id="other-projects" class="mb-16 scroll-mt-[20vh] md:mb-32 md:scroll-mt-64">
-  <h2 class="mb-8 text-4xl font-bold">Other Projects</h2>
-  <p>*Boop* Coming Soon!</p>
+  <h2 class="mb-16 text-4xl font-bold">Other Projects</h2>
+  <article class="mb-16">
+    <img class="mb-8 aspect-video h-auto w-full max-w-[400px] rounded-8 bg-white object-contain" src="./img/projects/tpc-course-planner.webp" alt="" width="400" height="225" loading="lazy" decoding="async" title="Two Point Campus Course Planner">
+    <h3 class="mb-4 text-xl font-medium">
+      Two Point Campus Course Planner
+      <span class="text-sm font-normal">
+        (<a href="https://rootenginear.github.io/tpc-course-planner" target="_blank" rel="nofollow noopener noreferrer"><span class="sr-only">Go to</span>Website</a>, <a href="https://github.com/rootEnginear/tpc-course-planner" target="_blank" rel="nofollow noopener noreferrer"><span class="sr-only">Open the repository on</span>GitHub</a>)
+      </span>
+    </h3>
+    <p>
+      This tool will help you to plan your perfect course combination for your campus.
+      This is done with a simple mathematical calculation. In practice, however, you might
+      have to fight with your timetable scheduler.
+    </p>
+  </article>
+
+  <article class="mb-16">
+    <img class="mb-8 aspect-video h-auto w-full max-w-[400px] rounded-8 bg-white object-contain" src="./img/projects/25th-parliament-meetings.webp" alt="" width="400" height="225" loading="lazy" decoding="async" title="25th Parliament Meetings">
+    <h3 class="mb-4 text-xl font-medium">
+      25<sup>th</sup> Parliament Meetings
+      <span class="text-sm font-normal">
+        (<a href="https://rootenginear.github.io/25th-parliament-meeting" target="_blank" rel="nofollow noopener noreferrer"><span class="sr-only">Go to</span>Website</a>, <a href="https://github.com/rootEnginear/25th-parliament-meeting" target="_blank" rel="nofollow noopener noreferrer"><span class="sr-only">Open the repository on</span>GitHub</a>)
+      </span>
+    </h3>
+    <p>
+      A collection of meeting records from the 25<sup>th</sup> parliament (also known as the
+      Prayuth period). This solves the searching problem on the Parliament website, so you
+      can find any meeting records faster.
+    </p>
+  </article>
+
+  <article class="mb-16">
+    <img class="mb-8 aspect-video h-auto w-full max-w-[400px] rounded-8 bg-white object-contain" src="./img/projects/my-common-patterns.webp" alt="" width="400" height="225" loading="lazy" decoding="async" title="My Common Patterns">
+    <h3 class="mb-4 text-xl font-medium">
+      My Common Patterns
+      <span class="text-sm font-normal">
+        (<a href="https://rootenginear.github.io/my-common-patterns" target="_blank" rel="nofollow noopener noreferrer"><span class="sr-only">Go to</span>Website</a>, <a href="https://github.com/rootEnginear/my-common-patterns" target="_blank" rel="nofollow noopener noreferrer"><span class="sr-only">Open the repository on</span>GitHub</a>)
+      </span>
+    </h3>
+    <p>My personal "frequently copy" code snippets and patterns.</p>
+  </article>
+
+  <article>
+    <img class="mb-8 aspect-video h-auto w-full max-w-[400px] rounded-8 bg-white object-contain" src="./img/projects/lib-reviews.webp" alt="" width="400" height="225" loading="lazy" decoding="async" title="Libraries (that I have used) Review">
+    <h3 class="mb-4 text-xl font-medium">
+      Libraries (that I have used) Review
+      <span class="text-sm font-normal">
+        (<a href="https://github.com/rootEnginear/libraries-i-used-review" target="_blank" rel="nofollow noopener noreferrer"><span class="sr-only">Read it on</span>GitHub</a>)
+      </span>
+    </h3>
+    <p>
+      My subjective review on libraries I have used and what I have experienced from them.
+    </p>
+  </article>
 </section>
     <section id="education" class="mb-16 scroll-mt-[20vh] md:mb-32 md:scroll-mt-64">
   <h2 class="mb-8 text-4xl font-bold">Education</h2>
