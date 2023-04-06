@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /ComCamp31-Homepage
+Disallow: /ModCom2019-Homepage
+Sitemap: https://rootenginear.github.io/sitemap.xml
+Host: https://rootenginear.github.io
