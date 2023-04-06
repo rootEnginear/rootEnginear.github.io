@@ -22,15 +22,16 @@ module.exports = {
     },
     colors: {
       transparent: "transparent",
-      current: "currentColor",
       black: "#000",
       white: "#fff",
       gray: colors.zinc,
+      accent: "#e34234",
     },
     borderWidth: {
       DEFAULT: "1px",
     },
     borderRadius: {
+      4: "4px",
       16: "16px",
       full: "9999px",
     },

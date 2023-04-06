@@ -1,93 +1,99 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import AppEmail from "../components/AppEmail.svelte";
 ---
 
 <Layout title="Suthep Chanchuphol — All about @rootEnginear">
-  <header class="p-16 md:p-32 flex gap-16 h-screen">
-    <div class="flex-1 flex flex-col justify-between items-start">
-      <div>
-        <div class="text-sm text-gray-500">name & position</div>
-        <h1 class="text-5xl font-bold mb-8">Suthep Chanchuphol</h1>
-        <p>
-          Web Developer at <a
-            href="https://punchup.world/"
-            target="_blank"
-            rel="nofollow noopener noreferrer">Punch Up</a
-          >
-        </p>
-      </div>
-      <img
-        class="rounded-16 aspect-square max-h-[500px] w-auto"
-        src="profile.jpg"
-        alt=""
-        width="500"
-        height="500"
-      />
-      <div>
-        <ul>
-          <li>Bangkok, Thailand</li>
-          <!-- <li>Email</li> -->
-          <li>
-            <a
-              href="https://github.com/rootEnginear"
-              target="_blank"
-              rel="nofollow noopener noreferrer">GitHub</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://www.linkedin.com/in/rootenginear/"
-              target="_blank"
-              rel="nofollow noopener noreferrer">LinkedIn</a
-            >
-          </li>
-        </ul>
-        <div class="text-sm text-gray-500">quick information</div>
-      </div>
+  <header
+    class="flex h-screen flex-col items-start justify-between p-16 md:fixed md:inset-0 md:right-auto md:p-32"
+  >
+    <div>
+      <div class="ss01 text-sm text-gray-500" aria-hidden="true">name & position</div>
+      <h1 class="text-4xl font-bold md:mb-8 md:text-5xl">Suthep Chanchuphol</h1>
+      <p>
+        Web Developer at <a
+          href="https://punchup.world/"
+          target="_blank"
+          rel="nofollow noopener noreferrer">Punch Up</a
+        >
+      </p>
     </div>
-    <div class="flex flex-col justify-between text-right">
-      <nav>
-        <div class="text-sm text-gray-500">main navigation</div>
-        <menu>
-          <li><a href="/">Home</a></li>
-        </menu>
-      </nav>
-      <nav>
-        <menu>
-          <li>
-            <a href="#technological-skills">Technological Skills</a>
-          </li>
-          <li>
-            <a href="#work-experiences">Work Experiences</a>
-          </li>
-          <!-- <li>
-            <a href="#side-projects">Side Projects</a>
-          </li> -->
-          <!-- <li>
-            <a href="#achievements">Achievements</a>
-          </li> -->
-          <!-- <li>
-            <a href="#languages">Languages</a>
-          </li> -->
-          <!-- <li>
-            <a href="#education">Education</a>
-          </li> -->
-          <!-- <li>
-            <a href="#random-facts">Random Facts</a>
-          </li> -->
-        </menu>
-        <div class="text-sm text-gray-500">headings</div>
-      </nav>
+    <img
+      class="aspect-square w-auto rounded-16 md:w-[300px] lg:w-[500px]"
+      src="profile.jpg"
+      alt=""
+      width="500"
+      height="500"
+    />
+    <div>
+      <ul>
+        <li>Bangkok, Thailand</li>
+        <li><AppEmail client:visible /></li>
+        <li>
+          <a
+            href="https://github.com/rootEnginear"
+            target="_blank"
+            rel="nofollow noopener noreferrer">GitHub</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/rootenginear/"
+            target="_blank"
+            rel="nofollow noopener noreferrer">LinkedIn</a
+          >
+        </li>
+      </ul>
+      <div class="ss01 text-sm text-gray-500" aria-hidden="true">quick information</div>
     </div>
   </header>
-  <!-- max-w-[80ch] -->
-  <main class="p-16 md:p-32 border-l-[2px] border-l-white border-dashed ml-16 md:ml-32">
-    <section id="technological-skills" class="mb-16 md:mb-32">
-      <h2 class="text-4xl font-bold mb-8">Technological Skills</h2>
-      <div class="grid gap-16 grid-cols-2 md:grid-cols-4">
+
+  <div
+    class="sticky top-0 z-10 -mt-16 flex justify-between p-16 md:fixed md:inset-0 md:left-auto md:mt-0 md:flex-col md:p-32 md:text-right"
+  >
+    <nav class="flex-1">
+      <div class="ss01 text-sm text-gray-500" aria-hidden="true">main navigation</div>
+      <menu class="text-sm md:text-base">
+        <li><a href="/">Home</a></li>
+      </menu>
+    </nav>
+    <nav class="flex flex-1 flex-col text-right md:justify-end">
+      <div class="ss01 text-sm text-gray-500 md:order-2" aria-hidden="true">headings</div>
+      <menu class="text-sm md:text-base">
+        <li>
+          <a href="#technological-skills">Technological Skills</a>
+        </li>
+        <li>
+          <a href="#work-experiences">Work Experiences</a>
+        </li>
+        <li>
+          <a href="#achievements">Achievements</a>
+        </li>
+        <li>
+          <a href="#other-projects">Other Projects</a>
+        </li>
+        <li>
+          <a href="#languages">Languages</a>
+        </li>
+        <li>
+          <a href="#education">Education</a>
+        </li>
+        <li>
+          <a href="#random-facts">Random Facts</a>
+        </li>
+      </menu>
+    </nav>
+  </div>
+
+  <main
+    class="ml-16 max-w-[80ch] border-l-[2px] border-dashed border-l-white p-16 md:ml-[364px] md:mt-[100vh] md:p-32 lg:ml-[564px]"
+  >
+    <section id="technological-skills" class="mb-16 scroll-mt-64 md:mb-32">
+      <h2 class="mb-8 text-4xl font-bold">Technological Skills</h2>
+      <div class="grid grid-cols-2 gap-16 md:grid-cols-2 xl:grid-cols-4">
         <div>
-          <h3 class="text-xl font-medium mb-4">Proficient</h3>
-          <ul class="list-disc ml-1rem">
+          <h3 class="mb-4 text-xl font-medium">Proficient</h3>
+          <ul class="ml-1rem list-disc marker:text-accent">
             <li>HTML & CSS</li>
             <li>JavaScript</li>
             <li>TypeScript</li>
@@ -95,8 +101,8 @@ import Layout from "../layouts/Layout.astro";
           </ul>
         </div>
         <div>
-          <h3 class="text-xl font-medium mb-4">Experienced</h3>
-          <ul class="list-disc ml-1rem">
+          <h3 class="mb-4 text-xl font-medium">Experienced</h3>
+          <ul class="ml-1rem list-disc marker:text-accent">
             <li>Vue.js</li>
             <li>React.js (Next.js)</li>
             <li>SCSS</li>
@@ -104,16 +110,16 @@ import Layout from "../layouts/Layout.astro";
           </ul>
         </div>
         <div>
-          <h3 class="text-xl font-medium mb-4">Familiar</h3>
-          <ul class="list-disc ml-1rem">
+          <h3 class="mb-4 text-xl font-medium">Familiar</h3>
+          <ul class="ml-1rem list-disc marker:text-accent">
             <li>Firebase</li>
             <li>SQL, RDBMS (MySQL, MariaDB)</li>
             <li>Node.js</li>
           </ul>
         </div>
         <div>
-          <h3 class="text-xl font-medium mb-4">Other Interests</h3>
-          <ul class="list-disc ml-1rem">
+          <h3 class="mb-4 text-xl font-medium">Other Interests</h3>
+          <ul class="ml-1rem list-disc marker:text-accent">
             <li>UI/UX</li>
             <li>Artificial Intelligences</li>
             <li>Quantum Computing</li>
@@ -121,44 +127,121 @@ import Layout from "../layouts/Layout.astro";
         </div>
       </div>
     </section>
-    <section id="work-experiences">
-      <h2 class="text-4xl font-bold mb-8">Work Experiences</h2>
-      <div class="grid gap-16 grid-cols-2 md:grid-cols-4">
-        <div>
-          <h3 class="text-xl font-medium mb-4">Proficient</h3>
-          <ul class="list-disc ml-1rem">
-            <li>HTML & CSS</li>
-            <li>JavaScript</li>
-            <li>TypeScript</li>
-            <li>Svelte</li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="text-xl font-medium mb-4">Experienced</h3>
-          <ul class="list-disc ml-1rem">
-            <li>Vue.js</li>
-            <li>React.js (Next.js)</li>
-            <li>SCSS</li>
-            <li>Git</li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="text-xl font-medium mb-4">Familiar</h3>
-          <ul class="list-disc ml-1rem">
-            <li>Firebase</li>
-            <li>SQL, RDBMS (MySQL, MariaDB)</li>
-            <li>Node.js</li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="text-xl font-medium mb-4">Other Interests</h3>
-          <ul class="list-disc ml-1rem">
-            <li>UI/UX</li>
-            <li>Artificial Intelligences</li>
-            <li>Quantum Computing</li>
-          </ul>
-        </div>
-      </div>
+    <section id="work-experiences" class="mb-16 scroll-mt-64 md:mb-32">
+      <h2 class="mb-8 text-4xl font-bold">Work Experiences</h2>
+      <p>*Boop* Coming Soon!</p>
+    </section>
+    <section id="achievements" class="mb-16 scroll-mt-64 md:mb-32">
+      <h2 class="mb-8 text-4xl font-bold">Achievements</h2>
+      <article class="mb-8">
+        <h3 class="mb-4 text-xl font-medium">
+          IBM Certified Associate Developer in Quantum Computation using Qiskit v0.2x
+        </h3>
+        <p class="mb-4">
+          I began studying quantum computing in my 3<sup>rd</sup> year of undergraduate studies,
+          and I&apos;ve been using the Qiskit library ever since. It allows me to experiment
+          and learn about the mysterious world of quantum computing. The fact that I was given
+          a certificate voucher by IBM to take this exam is a great opportunity. I&apos;ve
+          learned a lot more about Qiskit, and thanks to my determination, I was able to demonstrate
+          my understanding on this test and pass. This will be the first step in my quantum
+          computing journey, and I can&apos;t wait to get started on the next one!
+        </p>
+        <footer class="text-sm">
+          — <time datetime="2021-11-03T17:00:00.000Z">November 4, 2021</time> | <a
+            class="underline"
+            href="https://www.credly.com/badges/a27f9afe-1728-4784-abc8-4a97ee3b794b/public_url"
+            target="_blank"
+            rel="nofollow noopener noreferrer">View on Credly</a>
+        </footer>
+      </article>
+      <article>
+        <h3 class="mb-4 text-xl font-medium">
+          Outstanding Award in 18th Young Webmaster Camp
+        </h3>
+        <p class="mb-4">
+          I have participated in the 18<sup>th</sup> Young Webmaster Camp as a web programmer.
+          Working as part of a team with people from different fields has taught me a lot of
+          valuable lessons. I&apos;ve learned to truly understand the problem at its core and
+          collaborate with people from various backgrounds, skill sets, and problems. My team
+          has gotten along smoothly, and we&apos;ve been fighting since the day we first met.
+          In the end, we won the &ldquo;Outstanding Award&rdquo;, the &ldquo;Best Teamwork
+          Award&rdquo;, and the &ldquo;Best Web Programming Award&rdquo;. This is going to
+          be a memorable moment for me.
+        </p>
+        <footer class="text-sm">
+          — <time datetime="2021-08-14T17:00:00.000Z">August 15, 2021</time> | <a
+            class="underline"
+            href="https://www.facebook.com/ywcth/"
+            target="_blank"
+            rel="nofollow noopener noreferrer">Visit event Facebook page</a>
+        </footer>
+      </article>
+    </section>
+    <section id="other-projects" class="mb-16 scroll-mt-64 md:mb-32">
+      <h2 class="mb-8 text-4xl font-bold">Other Projects</h2>
+      <p>*Boop* Coming Soon!</p>
+    </section>
+    <section id="languages" class="mb-16 scroll-mt-64 md:mb-32">
+      <h2 class="mb-8 text-4xl font-bold">Languages</h2>
+      <ul class="ml-1rem list-disc marker:text-accent">
+        <li><span class="font-bold">Thai:</span> Native Speaker</li>
+        <li><span class="font-bold">English:</span> Intermediate</li>
+      </ul>
+    </section>
+    <section id="education" class="mb-16 scroll-mt-64 md:mb-32">
+      <h2 class="mb-8 text-4xl font-bold">Education</h2>
+      <ul class="ml-1rem list-disc marker:text-accent">
+        <li>
+          <p>
+            <span class="font-bold">
+              King Mongkut&apos;s University of Technology Thonburi
+            </span><br />
+            Studying bachelor&apos;s degree. Majoring in computer engineering.
+          </p>
+        </li>
+        <li>
+          <p>
+            <span class="font-bold"> Benchamaracharungsarit School</span><br />
+            Studying Intensive English Program (IEP)
+          </p>
+        </li>
+      </ul>
+    </section>
+    <section id="random-facts">
+      <h2 class="mb-8 text-4xl font-bold">Random Facts</h2>
+      <ul class="ml-1rem list-disc marker:text-accent">
+        <li>
+          According to wizardingworld.com, I was sorted into Gryffindor, but I personally
+          feel like Hufflepuff suits me better.
+        </li>
+        <li>
+          I used to be a member of my university&apos;s choir. My vocal range is D2 - D5.
+        </li>
+        <li>
+          I love coffee. I once drank liters of it before throwing up terribly. Well,
+          fortunately, I didn&apos;t have to go to the hospital or anything. I just
+          survived that caffeine dosage.
+        </li>
+        <li>
+          I used to be in a marching band in high school as a color guard. Yub, I used to
+          be able to do a split but I don&apos;t think I can anymore.
+        </li>
+        <li>
+          I learned how to code for the first time when I was in 4<sup>th</sup> grade. I began
+          learning to write Visual Basic scripts in Microsoft Excel (aka the VBA.) I didn&apos;t
+          even know what is the difference between a string and an integer at that time. But
+          learning from trial and errors worked out for me (or should I say &ldquo;If it worked,
+          don&apos;t touch.&rdquo; worked for me.)
+        </li>
+      </ul>
     </section>
   </main>
+
+  <footer
+    class="mb-32 ml-16 max-w-[80ch] pt-32 md:mb-[30vh] md:ml-[364px] lg:ml-[564px] xl:mb-[20vh]"
+  >
+    Copyright &copy; {new Date().getFullYear()} Suthep Chanchuphol <span class="nobr"
+      >All right reserved.</span
+    >
+  </footer>
 </Layout>

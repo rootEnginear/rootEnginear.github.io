@@ -4,6 +4,7 @@
     url(./fonts/SpaceGrotesk[wght].ttf) format("truetype");
   font-weight: 100 700;
   font-style: normal;
+  font-display: swap;
 }
 
 @tailwind base;
@@ -20,11 +21,25 @@ html {
   color-scheme: dark;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  @apply bg-gray-900;
+  line-height: 1.6;
+  letter-spacing: 0.2px;
+  @apply bg-gray-900 selection:bg-accent selection:text-black;
+}
+
+.ss01 {
+  font-feature-settings: "ss01", "ss04", "case", "zero";
 }
 
 a {
-  @apply underline decoration-dashed underline-offset-2 decoration-1;
+  @apply underline decoration-accent decoration-dashed decoration-1 underline-offset-2;
+}
+
+a:is(:hover, :focus) {
+  @apply decoration-solid;
+}
+
+a:focus-visible {
+  @apply bg-accent font-bold text-black outline-0 ring-2 ring-accent;
 }
 
 .nobr {
