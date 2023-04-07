@@ -18,7 +18,7 @@ module.exports = {
       16: "16px",
       32: "32px",
       64: "64px",
-      "1rem": "1rem",
+      list: "2ch",
     },
     colors: {
       transparent: "transparent",
