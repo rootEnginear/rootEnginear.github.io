@@ -13,12 +13,12 @@ import Education from "../sections/education.astro";
 import RandomFacts from "../sections/random-facts.astro";
 ---
 
-<AppLenis client:load />
-<AppLoadFont client:idle />
 <Layout
   title="Suthep Chanchuphol"
   description="My expertise is about crafting pixel-perfect websites from designs. With my experiences, I'm ready to take challenges and make exquisite websites for people."
 >
+  <AppLenis client:load />
+  <AppLoadFont client:idle />
   <header
     class="z-10 flex h-screen flex-col items-start justify-between p-16 md:fixed md:inset-0 md:right-auto md:p-32"
   >
