@@ -8,6 +8,7 @@ module.exports = {
     fontFamily: {
       sans: ["Space Grotesk Variable", ...defaultTheme.fontFamily.sans],
       serif: ["Space Grotesk Variable", ...defaultTheme.fontFamily.serif],
+      mono: ["Jetbrains Mono", ...defaultTheme.fontFamily.mono],
     },
     spacing: {
       0: "0",
