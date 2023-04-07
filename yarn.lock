@@ -537,6 +537,11 @@
     deepmerge "^4.2.2"
     escalade "^3.1.1"
 
+"@studio-freight/lenis@^1.0.6":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@studio-freight/lenis/-/lenis-1.0.6.tgz#d22494bc1c137ba0854398d251a6c871a18a529b"
+  integrity sha512-g/cTDwra/6WsCGK6KTyfOlTAwJA5xFCJtRFNGM+Ge/oIOg2emLJKV+yTFATekjuCX4r7W5tcBp8LcQ2b+P6yuQ==
+
 "@sveltejs/vite-plugin-svelte@^2.0.2":
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/@sveltejs/vite-plugin-svelte/-/vite-plugin-svelte-2.0.4.tgz#607b6abe15e02e540249e3f47d47fb9f15952e80"

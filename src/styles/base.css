@@ -23,7 +23,10 @@ html {
   scroll-behavior: smooth;
   line-height: 1.6;
   letter-spacing: 0.2px;
+
   @apply bg-gray-900 selection:bg-accent selection:text-black;
+
+  --nav-height: 152px;
 }
 
 a {
@@ -40,6 +43,19 @@ a:focus-visible {
 
 .nobr {
   white-space: nowrap;
+}
+
+/* Lenis */
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
 }
 
 @tailwind utilities;

@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 
 import AppEmail from "../components/AppEmail.svelte";
+import AppLenis from "../components/AppLenis.svelte";
 
 import TechnologicalSkills from "../sections/technological-skills.astro";
 import WorkExperiences from "../sections/work-experiences.astro";
@@ -11,6 +12,7 @@ import Education from "../sections/education.astro";
 import RandomFacts from "../sections/random-facts.astro";
 ---
 
+<AppLenis client:load />
 <Layout
   title="Suthep Chanchuphol"
   description="My expertise is about crafting pixel-perfect websites from designs. With my experiences, I'm ready to take challenges and make exquisite websites for people."
