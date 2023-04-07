@@ -6,7 +6,11 @@
   $: display_data = is_mounted
     ? is_revealing
       ? "suthep.chanchuphol@outlook.com"
-      : "Double click to show email"
+      : `Double ${
+          window.matchMedia("(hover: hover) and (pointer: fine)").matches
+            ? "click"
+            : "tap"
+        } to show email`
     : "Waiting for hydration...";
 
   const reveal = () => {
