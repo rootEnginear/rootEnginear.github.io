@@ -18,6 +18,7 @@ module.exports = {
       8: "8px",
       16: "16px",
       32: "32px",
+      48: "48px",
       64: "64px",
       list: "2ch",
     },

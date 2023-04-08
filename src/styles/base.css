@@ -37,7 +37,7 @@ a {
 }
 
 a:is(:hover, :focus) {
-  @apply decoration-solid;
+  @apply decoration-solid decoration-2;
 }
 
 a:focus-visible {

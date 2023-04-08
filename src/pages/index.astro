@@ -4,6 +4,7 @@ import Layout from "../layouts/Layout.astro";
 import AppEmail from "../components/AppEmail.svelte";
 import AppLenis from "../components/AppLenis.svelte";
 import AppLoadFont from "../components/AppLoadFont.svelte";
+import AppMouse from "../components/AppMouse.svelte";
 
 import TechnologicalSkills from "../sections/technological-skills.astro";
 import WorkExperiences from "../sections/work-experiences.astro";
@@ -19,6 +20,7 @@ import RandomFacts from "../sections/random-facts.astro";
 >
   <AppLenis client:load />
   <AppLoadFont client:idle />
+  <AppMouse client:idle />
   <header
     class="z-10 flex h-screen flex-col items-start justify-between p-16 md:fixed md:inset-0 md:right-auto md:p-32"
   >
