@@ -51,7 +51,7 @@ a:focus-visible {
 
 /* Lenis */
 .lenis.lenis-smooth {
-  scroll-behavior: auto;
+  scroll-behavior: unset;
 }
 
 html.lenis {
