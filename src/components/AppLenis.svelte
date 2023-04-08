@@ -28,6 +28,6 @@
   });
 </script>
 
-<div class="fixed h-0 w-0" aria-hidden>
+<div class="fixed h-0 w-0" aria-hidden="true">
   <div id="margin-ruler" class="h-[--nav-height] lg:h-64" />
 </div>
