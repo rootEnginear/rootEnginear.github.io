@@ -29,5 +29,5 @@
 </script>
 
 <div class="fixed h-0 w-0" aria-hidden>
-  <div id="margin-ruler" class="h-[--nav-height] md:h-64" />
+  <div id="margin-ruler" class="h-[--nav-height] lg:h-64" />
 </div>
