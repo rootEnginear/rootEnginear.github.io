@@ -11,7 +11,7 @@
             ? "click"
             : "tap"
         } to show email`
-    : "Waiting for hydration...";
+    : "";
 
   const reveal = () => {
     is_revealing = !is_revealing;
@@ -20,12 +20,20 @@
   onMount(() => (is_mounted = true));
 </script>
 
-<span
-  on:dblclick={reveal}
-  class={is_revealing ? "select-all cursor-auto" : "select-none cursor-pointer"}
->
-  {display_data}
-</span>
 <noscript>
-  <span>Please enable JavaScript to see the email.</span>
+  <span>Enable JavaScript to see the email</span>
 </noscript>
+{#if is_mounted}
+  <button
+    type="button"
+    on:dblclick={reveal}
+    class={is_revealing
+      ? "select-all cursor-auto"
+      : "underline decoration-accent decoration-dashed decoration-1 underline-offset-2 outline-0 hover:decoration-solid hover:decoration-2 focus-visible:bg-accent focus-visible:font-bold focus-visible:text-black focus-visible:outline-0 focus-visible:ring-2 focus-visible:ring-accent"}
+    class:cursor-pointer={is_mounted && !is_revealing}
+  >
+    {display_data}
+  </button>
+{:else}
+  <span>&nbsp;</span>
+{/if}
