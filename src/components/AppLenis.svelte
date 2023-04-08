@@ -15,12 +15,10 @@
     let el = document.querySelectorAll('[href^="#"]');
     let anchors = [];
     el.forEach((el, i) => {
-      anchors[i] = (event) => {
-        event.preventDefault();
+      anchors[i] = () =>
         lenis.scrollTo(el.getAttribute("href"), {
           offset: -document.getElementById("margin-ruler").getBoundingClientRect().height,
         });
-      };
       el.addEventListener("click", anchors[i]);
     });
 

@@ -20,7 +20,6 @@ html {
   font-feature-settings: "ss04", "case", "zero";
   color-scheme: dark;
   overflow-x: hidden;
-  scroll-behavior: smooth;
   line-height: 1.6;
   letter-spacing: 0.2px;
 
@@ -50,10 +49,6 @@ a:focus-visible {
 }
 
 /* Lenis */
-.lenis.lenis-smooth {
-  scroll-behavior: unset;
-}
-
 html.lenis {
   height: auto;
 }
