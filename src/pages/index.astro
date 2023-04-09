@@ -22,7 +22,7 @@ import RandomFacts from "../sections/random-facts.astro";
   <AppLoadFont client:idle />
   <AppMouse client:idle />
   <header
-    class="z-10 flex h-screen flex-col items-start justify-between p-16 md:fixed md:inset-0 md:right-auto md:p-32"
+    class="z-10 flex h-screen flex-col items-start justify-between gap-16 p-16 md:fixed md:inset-0 md:right-auto md:p-32"
   >
     <div>
       <div class="text-xs text-gray-400 md:text-sm" aria-hidden="true">
@@ -49,9 +49,9 @@ import RandomFacts from "../sections/random-facts.astro";
         >
       </p>
     </div>
-    <div>
+    <div class="min-h-0 w-full">
       <img
-        class="absolute top-4 aspect-square w-auto rounded-16 opacity-30 blur-lg md:w-[300px] lg:w-[500px]"
+        class="absolute left-1/2 top-4 aspect-square h-full w-auto -translate-x-1/2 rounded-16 opacity-30 blur-lg md:left-0 md:max-w-[300px] md:translate-x-0 lg:max-w-[500px]"
         src="./img/profile.webp"
         srcset="./img/profile.webp 1x, ./img/profile@2x.webp 2x"
         alt=""
@@ -61,7 +61,7 @@ import RandomFacts from "../sections/random-facts.astro";
         decoding="async"
       />
       <img
-        class="aspect-square w-auto rounded-16 md:w-[300px] lg:w-[500px]"
+        class="mx-auto aspect-square h-full w-auto rounded-16 md:mx-0 md:max-w-[300px] lg:max-w-[500px]"
         src="./img/profile.webp"
         srcset="./img/profile.webp 1x, ./img/profile@2x.webp 2x"
         alt=""
