@@ -4,10 +4,10 @@
   const THROTTLE_TIME = 50;
 
   let enabled = false;
+  let hasFirstValue = false;
+  let x = 0;
+  let y = 0;
   let isIn = false;
-  let left: number = 0;
-  let top: number = 0;
-
   let isPointer = false;
 
   const update = (e: MouseEvent | null) =>
@@ -19,8 +19,13 @@
         isPointer = false;
       }
 
-      left = e.clientX;
-      top = e.clientY;
+      x = e.clientX;
+      y = e.clientY;
+
+      if (!hasFirstValue)
+        requestAnimationFrame(() => {
+          hasFirstValue = true;
+        });
     });
 
   let last: MouseEvent | null = null;
@@ -64,10 +69,13 @@
 
 {#if enabled}
   <div
-    class="h-48 w-48 border border-accent transform-gpu ease-out fixed top-0 left-0 duration-200 rounded-full z-20 mix-blend-difference pointer-events-none"
-    style:--tw-translate-x={`calc(-50% + ${left}px)`}
-    style:--tw-translate-y={`calc(-50% + ${top}px)`}
-    style:--tw-scale-x={isIn ? (isPointer ? 1.33 : 1) : 0}
-    style:--tw-scale-y={isIn ? (isPointer ? 1.33 : 1) : 0}
+    class="h-48 w-48 border border-accent transform-gpu ease-out fixed top-0 left-0 rounded-full z-20 mix-blend-difference pointer-events-none"
+    class:duration-200={hasFirstValue}
+    style:--tw-translate-x="calc(var(--mouse-x)*1px - 50%)"
+    style:--tw-translate-y="calc(var(--mouse-y)*1px - 50%)"
+    style:--mouse-x={x}
+    style:--mouse-y={y}
+    style:--tw-scale-x={isIn && hasFirstValue ? (isPointer ? 1.33 : 1) : 0}
+    style:--tw-scale-y={isIn && hasFirstValue ? (isPointer ? 1.33 : 1) : 0}
   />
 {/if}
