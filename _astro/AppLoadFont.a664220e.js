@@ -1,0 +1,1 @@
+import{S as n,i as o,s,o as a}from"./index.305b5983.js";function l(t){return a(()=>{document.getElementById("link-font").setAttribute("media","all")}),[]}class u extends n{constructor(e){super(),o(this,e,l,null,s,{})}}export{u as default};
