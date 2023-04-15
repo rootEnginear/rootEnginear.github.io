@@ -1,3 +1,7 @@
+---
+import ProjectCard from "../components/ProjectCard.astro";
+---
+
 <section
   id="work-experiences"
   class="mb-16 scroll-mt-[--nav-height] md:mb-32 md:scroll-mt-64"
@@ -27,37 +31,16 @@
       <li>Assist other coworkers with their problems</li>
       <li>Be humorous and funny around my coworker!</li>
     </ul>
-    <h4 class="mb-4 text-lg font-medium">Projects:</h4>
-    <article class="border-l-2 border-l-gray-700 py-8 pl-16">
-      <a
-        href="https://wevis.info/law-watch"
-        target="_blank"
-        rel="nofollow noopener noreferrer"
-      >
-        <img
-          class="mb-8 inline-block aspect-video h-auto w-full max-w-[400px] rounded-8 object-cover"
-          src="https://wevis.info/law-watch/og.png"
-          alt=""
-          width="400"
-          height="225"
-          loading="lazy"
-          decoding="async"
-          title="Law Watch"
-        />
-      </a>
-      <h5 class="font-medium">
-        Law Watch
-        <span class="nobr text-sm font-normal">
-          (<a
-            href="https://wevis.info/law-watch"
-            target="_blank"
-            rel="nofollow noopener noreferrer"
-            ><span class="sr-only">Go to</span>Website</a
-          >)
-        </span>
-      </h5>
-      <p class="text-sm">What laws do our MPs propose and/or vote on?</p>
-    </article>
+    <section>
+      <h4 class="mb-4 text-lg font-medium">Project:</h4>
+      <ProjectCard
+        title="Law Watch"
+        description="What laws do our MPs propose and/or vote on?"
+        src="https://wevis.info/law-watch/og.png"
+        website="https://wevis.info/law-watch"
+        github="https://github.com/wevisdemo/law-watch"
+      />
+    </section>
   </article>
 
   <article class="mb-16">
@@ -82,40 +65,16 @@
       <li>Choreographed animations on the website</li>
       <li>Assisted the team in content and design</li>
     </ul>
-    <h4 class="mb-4 text-lg font-medium">Project:</h4>
-    <article class="border-l-2 border-l-gray-700 py-8 pl-16">
-      <a
-        href="https://wevis.info/parliament-in-a-nutshell"
-        target="_blank"
-        rel="nofollow noopener noreferrer"
-      >
-        <img
-          class="mb-8 inline-block aspect-video h-auto w-full max-w-[400px] rounded-8 object-cover"
-          src="https://wevis.info/parliament-in-a-nutshell/og.jpg"
-          alt=""
-          width="400"
-          height="225"
-          loading="lazy"
-          decoding="async"
-          title="สรุปสั้นสภาไทย (Thai Parliament in a Coconutshell)"
-        />
-      </a>
-      <h5 class="font-medium">
-        Thai Parliament in a (Coco)Nutshell
-        <span class="nobr text-sm font-normal">
-          (<a
-            href="https://wevis.info/parliament-in-a-nutshell"
-            target="_blank"
-            rel="nofollow noopener noreferrer"
-            ><span class="sr-only">Go to</span>Website</a
-          >)
-        </span>
-      </h5>
-      <p class="text-sm">
-        Retracing many phenomena and movements from changes in the seats of the Thai House
-        of Representatives since the opening of the House of Representatives in May 2019.
-      </p>
-    </article>
+    <section>
+      <h4 class="mb-4 text-lg font-medium">Project:</h4>
+      <ProjectCard
+        title="Thai Parliament in a (Coco)Nutshell"
+        description="Retracing many phenomena and movements from changes in the seats of the Thai House of Representatives since the opening of the House of Representatives in May 2019."
+        src="https://wevis.info/parliament-in-a-nutshell/og.jpg"
+        website="https://wevis.info/parliament-in-a-nutshell"
+        github="https://github.com/wevisdemo/parliament-in-a-nutshell"
+      />
+    </section>
   </article>
 
   <article>

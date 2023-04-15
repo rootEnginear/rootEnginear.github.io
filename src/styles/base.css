@@ -33,7 +33,7 @@ code {
 }
 
 a {
-  @apply underline decoration-accent decoration-dashed decoration-1 underline-offset-2;
+  @apply inline-block underline decoration-accent decoration-dashed decoration-1 underline-offset-2;
 }
 
 a:is(:hover, :focus) {
@@ -42,6 +42,10 @@ a:is(:hover, :focus) {
 
 a:focus-visible {
   @apply bg-accent font-bold text-black outline-0 ring-2 ring-accent;
+}
+
+a:focus-visible:has(img) {
+  @apply rounded-8 ring-4;
 }
 
 .nobr {

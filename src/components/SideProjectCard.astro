@@ -1,0 +1,59 @@
+---
+import sanitizeHtml from "sanitize-html";
+
+export interface Props {
+  title: string;
+  description: string;
+  src: string;
+  website?: string;
+  github?: string;
+}
+
+const { title, description, src, website, github } = Astro.props;
+
+const masterUrl = website || github;
+---
+
+<article class="mb-32 last:mb-0">
+  <a class="mb-16" href={masterUrl} target="_blank" rel="nofollow noopener noreferrer">
+    <img
+      class="inline-block aspect-video h-auto w-full max-w-[400px] rounded-8 object-contain"
+      src={src}
+      alt=""
+      width="400"
+      height="225"
+      loading="lazy"
+      decoding="async"
+      title={sanitizeHtml(title, {
+        allowedTags: [],
+        allowedAttributes: {},
+      })}
+    />
+  </a>
+  <h3 class="mb-4 text-xl font-medium">
+    <a
+      href={masterUrl}
+      target="_blank"
+      rel="nofollow noopener noreferrer"
+      set:html={title}
+    />
+  </h3>
+  <p class="mb-4" set:html={description} />
+  <footer class="text-sm">
+    — {
+      website && (
+        <a href={website} target="_blank" rel="nofollow noopener noreferrer">
+          <span class="sr-only">Go to</span>Website
+        </a>
+      )
+    }
+    {website && github && "|"}
+    {
+      github && (
+        <a href={github} target="_blank" rel="nofollow noopener noreferrer">
+          <span class="sr-only">Open the repository on</span>GitHub
+        </a>
+      )
+    }
+  </footer>
+</article>
