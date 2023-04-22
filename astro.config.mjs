@@ -1,8 +1,8 @@
-import { defineConfig } from "astro/config";
-import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
-
 import svelte from "@astrojs/svelte";
+import tailwind from "@astrojs/tailwind";
+import compress from "astro-compress";
+import { defineConfig } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
@@ -21,5 +21,13 @@ export default defineConfig({
       ],
     }),
     svelte(),
+    compress({
+      html: {
+        collapseWhitespace: true,
+        removeComments: true,
+        removeRedundantAttributes: true,
+      },
+      img: false,
+    }),
   ],
 });

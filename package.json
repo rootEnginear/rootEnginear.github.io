@@ -15,6 +15,7 @@
     "@astrojs/tailwind": "^3.1.1",
     "@studio-freight/lenis": "^1.0.6",
     "astro": "^2.1.0",
+    "astro-compress": "^1.1.40",
     "d3-scale": "^4.0.2",
     "motion": "^10.15.5",
     "sanitize-html": "^2.10.0",
