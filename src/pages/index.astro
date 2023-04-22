@@ -1,12 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
-import AppEmail from "../components/AppEmail.svelte";
-import AppLenis from "../components/AppLenis.svelte";
-import AppLoadFont from "../components/AppLoadFont.svelte";
-import AppMouse from "../components/AppMouse.svelte";
-import App3d from "../components/App3d.svelte";
-
 import TechnologicalSkills from "../sections/technological-skills.astro";
 import WorkExperiences from "../sections/work-experiences.astro";
 import Achievements from "../sections/achievements.astro";
@@ -18,121 +12,35 @@ import RandomFacts from "../sections/random-facts.astro";
 <Layout
   title="Suthep Chanchuphol"
   description="My expertise is about crafting pixel-perfect websites from designs. With my experiences, I'm ready to take challenges and make exquisite websites for people."
+  marginTop
 >
-  <AppLenis client:load />
-  <AppLoadFont client:idle />
-  <AppMouse client:idle />
-  <header
-    class="z-10 flex h-screen flex-col items-start justify-between gap-16 p-16 md:fixed md:inset-0 md:right-auto md:p-32"
-  >
-    <div>
-      <div class="text-xs text-gray-400 md:text-sm" aria-hidden="true">
-        name & position
-      </div>
-      <h1 class="bg-gray-900 text-4xl font-bold md:mb-8 md:text-5xl">
-        Suthep Chanchuphol
-      </h1>
-      <p>
-        <img
-          class="inline-block align-baseline"
-          src="./favicon-16x16.png"
-          srcset="./favicon-16x16.png 1x, ./favicon-32x32.png 2x"
-          alt=""
-          width="16"
-          height="16"
-          loading="eager"
-          decoding="async"
-        />
-        Web Developer at <a
-          href="https://punchup.world/"
-          target="_blank"
-          rel="nofollow noopener noreferrer">Punch Up</a
-        >
-      </p>
+  <nav slot="secondary-nav" class="flex flex-1 flex-col items-end md:justify-end">
+    <div class="w-max bg-gray-900 text-xs text-gray-400 md:order-2 md:text-sm">
+      headings
     </div>
-    <App3d client:idle />
-    <div>
-      <ul class="text-sm md:text-base">
-        <li>Bangkok, Thailand</li>
-        <li><AppEmail client:visible /></li>
-        <li>
-          <a
-            href="https://github.com/rootEnginear"
-            target="_blank"
-            rel="nofollow noopener noreferrer">GitHub</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://www.linkedin.com/in/rootenginear/"
-            target="_blank"
-            rel="nofollow noopener noreferrer">LinkedIn</a
-          >
-        </li>
-      </ul>
-      <div class="text-xs text-gray-400 md:text-sm" aria-hidden="true">
-        quick information
-      </div>
-    </div>
-  </header>
+    <menu class="text-sm md:text-base">
+      <li class="ml-auto w-max bg-gray-900">
+        <a href="#technological-skills">Technological Skills</a>
+      </li>
+      <li class="ml-auto w-max bg-gray-900">
+        <a href="#work-experiences">Work Experiences</a>
+      </li>
+      <li class="ml-auto w-max bg-gray-900">
+        <a href="#achievements">Achievements</a>
+      </li>
+      <li class="ml-auto w-max bg-gray-900">
+        <a href="#side-projects">Side Projects</a>
+      </li>
+      <li class="ml-auto w-max bg-gray-900">
+        <a href="#education">Education</a>
+      </li>
+    </menu>
+  </nav>
 
-  <div
-    class="sticky top-0 z-10 -mt-16 flex justify-between p-16 md:fixed md:inset-0 md:left-auto md:mt-0 md:flex-col md:p-32"
-  >
-    <nav class="flex-1">
-      <div class="w-max bg-gray-900 text-xs text-gray-400 md:ml-auto md:text-sm">
-        main navigation
-      </div>
-      <menu class="text-sm md:text-base">
-        <li class="w-max bg-gray-900 md:ml-auto"><a href="/">Home</a></li>
-        <li class="w-max bg-gray-900 md:ml-auto">
-          <a href="https://rootenginear.gitbook.io/blog/">Blog (Legacy)</a>
-        </li>
-        <li class="w-max bg-gray-900 md:ml-auto">
-          <a href="#side-projects">Projects</a>
-        </li>
-      </menu>
-    </nav>
-    <nav class="flex flex-1 flex-col items-end md:justify-end">
-      <div class="w-max bg-gray-900 text-xs text-gray-400 md:order-2 md:text-sm">
-        headings
-      </div>
-      <menu class="text-sm md:text-base">
-        <li class="ml-auto w-max bg-gray-900">
-          <a href="#technological-skills">Technological Skills</a>
-        </li>
-        <li class="ml-auto w-max bg-gray-900">
-          <a href="#work-experiences">Work Experiences</a>
-        </li>
-        <li class="ml-auto w-max bg-gray-900">
-          <a href="#achievements">Achievements</a>
-        </li>
-        <li class="ml-auto w-max bg-gray-900">
-          <a href="#side-projects">Side Projects</a>
-        </li>
-        <li class="ml-auto w-max bg-gray-900">
-          <a href="#education">Education</a>
-        </li>
-      </menu>
-    </nav>
-  </div>
-
-  <main
-    class="ml-16 max-w-[80ch] border-l-2 border-dashed border-l-white p-16 md:ml-[364px] md:mt-[100vh] md:p-32 lg:ml-[564px]"
-  >
-    <TechnologicalSkills />
-    <WorkExperiences />
-    <Achievements />
-    <SideProjects />
-    <Education />
-    <RandomFacts />
-  </main>
-
-  <footer
-    class="mb-32 ml-16 max-w-[80ch] pr-16 pt-32 md:mb-[30vh] md:ml-[364px] md:pr-32 lg:ml-[564px] xl:mb-[20vh]"
-  >
-    Copyright &copy; {new Date().getFullYear()} Suthep Chanchuphol <span class="nobr"
-      >All right reserved.</span
-    >
-  </footer>
+  <TechnologicalSkills />
+  <WorkExperiences />
+  <Achievements />
+  <SideProjects />
+  <Education />
+  <RandomFacts />
 </Layout>

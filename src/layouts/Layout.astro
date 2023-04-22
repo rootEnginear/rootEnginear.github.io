@@ -1,78 +1,114 @@
 ---
-import "../styles/base.css";
+import { clsx } from "clsx";
+
+import Root from "./Root.astro";
+
+import AppLenis from "../components/AppLenis.svelte";
+import AppLoadFont from "../components/AppLoadFont.svelte";
+import AppMouse from "../components/AppMouse.svelte";
+import App3d from "../components/App3d.svelte";
+import AppEmail from "../components/AppEmail.svelte";
 
 export interface Props {
   title: string;
   description: string;
+  marginTop?: boolean;
 }
 
-const { title, description } = Astro.props;
+const { title, description, marginTop } = Astro.props;
 ---
 
-<!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="generator" content={Astro.generator} />
+<Root title={title} description={description}>
+  <AppLenis client:load />
+  <AppLoadFont client:idle />
+  <AppMouse client:idle />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <header
+    class="z-10 flex h-screen flex-col items-start justify-between gap-16 p-16 md:fixed md:inset-0 md:right-auto md:p-32"
+  >
+    <div>
+      <div class="text-xs text-gray-400 md:text-sm" aria-hidden="true">
+        name & position
+      </div>
+      <h1 class="bg-gray-900 text-4xl font-bold md:mb-8 md:text-5xl">
+        Suthep Chanchuphol
+      </h1>
+      <p>
+        <img
+          class="inline-block align-baseline"
+          src="./favicon-16x16.png"
+          srcset="./favicon-16x16.png 1x, ./favicon-32x32.png 2x"
+          alt=""
+          width="16"
+          height="16"
+          loading="eager"
+          decoding="async"
+        />
+        Web Developer at <a
+          href="https://punchup.world/"
+          target="_blank"
+          rel="nofollow noopener noreferrer">Punch Up</a
+        >
+      </p>
+    </div>
+    <App3d client:idle />
+    <div>
+      <ul class="text-sm md:text-base">
+        <li>Bangkok, Thailand</li>
+        <li><AppEmail client:visible /></li>
+        <li>
+          <a
+            href="https://github.com/rootEnginear"
+            target="_blank"
+            rel="nofollow noopener noreferrer">GitHub</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/rootenginear/"
+            target="_blank"
+            rel="nofollow noopener noreferrer">LinkedIn</a
+          >
+        </li>
+      </ul>
+      <div class="text-xs text-gray-400 md:text-sm" aria-hidden="true">
+        quick information
+      </div>
+    </div>
+  </header>
 
-    <meta name="apple-mobile-web-app-title" content="rootEnginear" />
-    <meta name="application-name" content="rootEnginear" />
-    <meta name="msapplication-TileColor" content="#e34234" />
-    <meta name="theme-color" content="#18181b" />
+  <div
+    class="sticky top-0 z-10 -mt-16 flex justify-between p-16 md:fixed md:inset-0 md:left-auto md:mt-0 md:flex-col md:p-32"
+  >
+    <nav class="flex-1">
+      <div class="w-max bg-gray-900 text-xs text-gray-400 md:ml-auto md:text-sm">
+        main navigation
+      </div>
+      <menu class="text-sm md:text-base">
+        <li class="w-max bg-gray-900 md:ml-auto"><a href="/">Home</a></li>
+        <li class="w-max bg-gray-900 md:ml-auto"><a href="/blog">Blog</a></li>
+        <li class="w-max bg-gray-900 md:ml-auto">
+          <a href="#side-projects">Projects</a>
+        </li>
+      </menu>
+    </nav>
+    <slot name="secondary-nav" />
+  </div>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#e34234" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-
-    <link rel="sitemap" href="/sitemap-index.xml" />
-
-    <title>{title} — All about @rootEnginear</title>
-    <meta name="description" content={description} />
-
-    <!-- OG, FB -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://rootenginear.github.io/" />
-    <meta property="og:title" content={`${title} — All about @rootEnginear`} />
-    <meta property="og:description" content={description} />
-    <meta property="og:image" content="https://rootenginear.github.io/social.jpg" />
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://rootenginear.github.io/" />
-    <meta property="twitter:title" content={`${title} — All about @rootEnginear`} />
-    <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content="https://rootenginear.github.io/social.jpg" />
-    <meta name="twitter:label1" value="Web Developer" />
-    <meta name="twitter:data1" value="@Punch Up" />
-    <meta name="twitter:label2" value="LinkedIn" />
-    <meta name="twitter:data2" value="/in/rootEnginear" />
-  </head>
-
-  <body>
+  <main
+    class={clsx(
+      "ml-16 max-w-[80ch] border-l-2 border-dashed border-l-white p-16 md:ml-[364px] md:p-32 lg:ml-[564px]",
+      marginTop ? "md:mt-[100vh]" : "md:mt-[--nav-height] lg:mt-64"
+    )}
+  >
     <slot />
-    <link
-      id="link-font"
-      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap"
-      rel="stylesheet"
-      media="print"
-    />
-    <noscript>
-      <link
-        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap"
-        rel="stylesheet"
-      />
-      <style>
-        html {
-          scroll-behavior: smooth;
-        }
-      </style>
-    </noscript>
-  </body>
-</html>
+  </main>
+
+  <footer
+    class="mb-32 ml-16 max-w-[80ch] pr-16 pt-32 md:mb-[30vh] md:ml-[364px] md:pr-32 lg:ml-[564px] xl:mb-[20vh]"
+  >
+    Copyright &copy; {new Date().getFullYear()} Suthep Chanchuphol <span class="nobr"
+      >All right reserved.</span
+    >
+  </footer>
+</Root>

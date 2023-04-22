@@ -1,0 +1,79 @@
+---
+import "../styles/base.css";
+
+export interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <meta name="apple-mobile-web-app-title" content="rootEnginear" />
+    <meta name="application-name" content="rootEnginear" />
+    <meta name="msapplication-TileColor" content="#e34234" />
+    <meta name="theme-color" content="#18181b" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#e34234" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <title>{title} — All about @rootEnginear</title>
+    <meta name="description" content={description} />
+
+    <!-- OG, FB -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://rootenginear.github.io/" />
+    <meta property="og:title" content={`${title} — All about @rootEnginear`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="https://rootenginear.github.io/social.jpg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://rootenginear.github.io/" />
+    <meta property="twitter:title" content={`${title} — All about @rootEnginear`} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content="https://rootenginear.github.io/social.jpg" />
+    <meta name="twitter:label1" value="Web Developer" />
+    <meta name="twitter:data1" value="@Punch Up" />
+    <meta name="twitter:label2" value="LinkedIn" />
+    <meta name="twitter:data2" value="/in/rootEnginear" />
+  </head>
+
+  <body>
+    <slot />
+
+    <link
+      id="link-font"
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap"
+      rel="stylesheet"
+      media="print"
+    />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap"
+        rel="stylesheet"
+      />
+      <style>
+        html {
+          scroll-behavior: smooth;
+        }
+      </style>
+    </noscript>
+  </body>
+</html>

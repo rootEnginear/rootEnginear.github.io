@@ -1,0 +1,28 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+let allPosts = [];
+try {
+  allPosts = await Astro.glob("./articles/*.astro");
+} catch (e) {}
+---
+
+<Layout title="Blog" description="">
+  <h2 class="mb-16 text-4xl font-bold">Articles</h2>
+  {
+    allPosts.length > 0 ? (
+      allPosts.map((post: any) => (
+        <li class="mb-16">
+          <a href={post.url}>{post.frontmatter.title}</a>
+        </li>
+      ))
+    ) : (
+      <p class="mb-16 font-mono italic">— No articles, yet.</p>
+    )
+  }
+  <p>
+    In the meantime, you can visit <a href="https://rootenginear.gitbook.io/blog/"
+      >the old blog here</a
+    >.
+  </p>
+</Layout>
