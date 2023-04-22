@@ -5,6 +5,7 @@ import AppEmail from "../components/AppEmail.svelte";
 import AppLenis from "../components/AppLenis.svelte";
 import AppLoadFont from "../components/AppLoadFont.svelte";
 import AppMouse from "../components/AppMouse.svelte";
+import App3d from "../components/App3d.svelte";
 
 import TechnologicalSkills from "../sections/technological-skills.astro";
 import WorkExperiences from "../sections/work-experiences.astro";
@@ -49,29 +50,7 @@ import RandomFacts from "../sections/random-facts.astro";
         >
       </p>
     </div>
-    <div class="min-h-0 w-full">
-      <img
-        class="absolute left-1/2 top-4 aspect-square h-full w-auto -translate-x-1/2 rounded-16 opacity-30 blur-lg md:left-0 md:max-w-[300px] md:translate-x-0 lg:max-w-[500px]"
-        src="./img/profile.webp"
-        srcset="./img/profile.webp 1x, ./img/profile@2x.webp 2x"
-        alt=""
-        width="300"
-        height="300"
-        loading="eager"
-        decoding="async"
-      />
-      <img
-        class="mx-auto aspect-square h-full w-auto rounded-16 md:mx-0 md:max-w-[300px] lg:max-w-[500px]"
-        src="./img/profile.webp"
-        srcset="./img/profile.webp 1x, ./img/profile@2x.webp 2x"
-        alt=""
-        width="300"
-        height="300"
-        loading="eager"
-        decoding="async"
-        title="Howdy Poggers!"
-      />
-    </div>
+    <App3d client:idle />
     <div>
       <ul class="text-sm md:text-base">
         <li>Bangkok, Thailand</li>
