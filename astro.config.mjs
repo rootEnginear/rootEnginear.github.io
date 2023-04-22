@@ -2,12 +2,14 @@ import sitemap from "@astrojs/sitemap";
 import svelte from "@astrojs/svelte";
 import tailwind from "@astrojs/tailwind";
 import compress from "astro-compress";
+import critters from "astro-critters";
 import { defineConfig } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://rootenginear.github.io",
   integrations: [
+    svelte(),
     tailwind({
       config: {
         applyBaseStyles: false,
@@ -20,7 +22,7 @@ export default defineConfig({
         "https://rootenginear.github.io/my-common-patterns",
       ],
     }),
-    svelte(),
+    critters(),
     compress({
       html: {
         collapseWhitespace: true,
