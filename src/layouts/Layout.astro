@@ -2,16 +2,12 @@
 import { clsx } from "clsx";
 
 import Root from "./Root.astro";
-
-import AppLenis from "../components/AppLenis.svelte";
-import AppLoadFont from "../components/AppLoadFont.svelte";
-import AppMouse from "../components/AppMouse.svelte";
-import App3d from "../components/App3d.svelte";
-import AppEmail from "../components/AppEmail.svelte";
+import App3d from "@/components/App3d.svelte";
+import AppEmail from "@/components/AppEmail.svelte";
 
 export interface Props {
-  title: string;
-  description: string;
+  title?: string;
+  description?: string;
   marginTop?: boolean;
 }
 
@@ -19,10 +15,6 @@ const { title, description, marginTop } = Astro.props;
 ---
 
 <Root title={title} description={description}>
-  <AppLenis client:load />
-  <AppLoadFont client:idle />
-  <AppMouse client:idle />
-
   <header
     class="z-10 flex h-screen flex-col items-start justify-between gap-16 p-16 md:fixed md:inset-0 md:right-auto md:p-32"
   >

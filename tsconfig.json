@@ -1,4 +1,10 @@
 {
   "extends": "astro/tsconfigs/strict",
-  "exclude": ["local"]
+  "exclude": ["local"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  }
 }

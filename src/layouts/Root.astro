@@ -1,12 +1,17 @@
 ---
-import "../styles/base.css";
+import "@/styles/base.css";
+import { DESCRIPTION, TITLE } from "@/data/defaults";
+
+import AppLenis from "@/components/AppLenis.svelte";
+import AppLoadFont from "@/components/AppLoadFont.svelte";
+import AppMouse from "@/components/AppMouse.svelte";
 
 export interface Props {
-  title: string;
-  description: string;
+  title?: string;
+  description?: string;
 }
 
-const { title, description } = Astro.props;
+const { title = TITLE, description = DESCRIPTION } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -56,6 +61,10 @@ const { title, description } = Astro.props;
   </head>
 
   <body>
+    <AppLenis client:load />
+    <AppLoadFont client:idle />
+    <AppMouse client:idle />
+
     <slot />
 
     <link

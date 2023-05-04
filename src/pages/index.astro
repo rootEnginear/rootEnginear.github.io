@@ -1,17 +1,15 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from "@/layouts/Layout.astro";
 
-import TechnologicalSkills from "../sections/technological-skills.astro";
-import WorkExperiences from "../sections/work-experiences.astro";
-import Achievements from "../sections/achievements.astro";
-import SideProjects from "../sections/side-projects.astro";
-import Education from "../sections/education.astro";
-import RandomFacts from "../sections/random-facts.astro";
+import Skills from "@/components/index/Skills.astro";
+import Experiences from "@/components/index/Experiences.astro";
+import Achievements from "@/components/index/Achievements.astro";
+import SideProjects from "@/components/index/SideProjects.astro";
+import Education from "@/components/index/Education.astro";
+import RandomFacts from "@/components/index/RandomFacts.astro";
 ---
 
 <Layout
-  title="Suthep Chanchuphol"
-  description="My expertise is about crafting pixel-perfect websites from designs. With my experiences, I'm ready to take challenges and make exquisite websites for people."
   marginTop
 >
   <nav slot="secondary-nav" class="flex flex-1 flex-col items-end md:justify-end">
@@ -37,8 +35,8 @@ import RandomFacts from "../sections/random-facts.astro";
     </menu>
   </nav>
 
-  <TechnologicalSkills />
-  <WorkExperiences />
+  <Skills />
+  <Experiences />
   <Achievements />
   <SideProjects />
   <Education />

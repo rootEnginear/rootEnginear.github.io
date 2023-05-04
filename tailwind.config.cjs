@@ -9,6 +9,7 @@ module.exports = {
       sans: ["Space Grotesk Variable", ...defaultTheme.fontFamily.sans],
       serif: ["Space Grotesk Variable", ...defaultTheme.fontFamily.serif],
       mono: ["Jetbrains Mono", ...defaultTheme.fontFamily.mono],
+      content: ["Sarabun", ...defaultTheme.fontFamily.sans],
     },
     spacing: {
       0: "0",
