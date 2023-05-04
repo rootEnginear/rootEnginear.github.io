@@ -23,17 +23,16 @@
     camera.lookAt(scene.position);
 
     const renderer = new THREE.WebGLRenderer();
-    renderer.setSize(500, 500);
+    renderer.setSize(250, 250);
     renderer.domElement.classList.add(
+      "geo-canvas",
       "mx-auto",
-      "aspect-square",
-      "!h-full",
-      "!w-auto",
-      "rounded-16",
       "md:mx-0",
-      "max-w-full",
-      "md:max-w-[300px]",
-      "lg:max-w-[500px]"
+      "aspect-square",
+      "!h-auto",
+      "!w-full",
+      "md:!w-[300px]",
+      "lg:!w-[500px]"
     );
     document.getElementById("3d")!.appendChild(renderer.domElement);
 

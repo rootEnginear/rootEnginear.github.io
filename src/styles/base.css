@@ -48,6 +48,10 @@ a:focus-visible:has(img) {
   @apply rounded-8 ring-4;
 }
 
+.geo-canvas {
+  image-rendering: pixelated;
+}
+
 .nobr {
   white-space: nowrap;
 }
