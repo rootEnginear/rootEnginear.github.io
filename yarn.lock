@@ -107,6 +107,13 @@
   dependencies:
     prismjs "^1.28.0"
 
+"@astrojs/prism@^2.1.2":
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/@astrojs/prism/-/prism-2.1.2.tgz#7486cb886ba3354e38ef4e58cbbe72f31337689e"
+  integrity sha512-3antim1gb34689GHRQFJ88JEo93HuZKQBnmxDT5W/nxiNz1p/iRxnCTEhIbJhqMOTRbbo5h2ldm5qSxx+TMFQA==
+  dependencies:
+    prismjs "^1.28.0"
+
 "@astrojs/sitemap@^1.2.2":
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/@astrojs/sitemap/-/sitemap-1.2.2.tgz#bc9917773e1ad80a63f0fc20c4136922f4bad602"
@@ -4220,6 +4227,11 @@ supports-preserve-symlinks-flag@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz#6eda4bd344a3c94aea376d4cc31bc77311039e09"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
+
+svelte-action-balancer@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/svelte-action-balancer/-/svelte-action-balancer-1.0.4.tgz#9a1e5af983e94584a2af87616cb2d68a61526ca4"
+  integrity sha512-QEJ/UJ576/wt+Sr3Uhswg/6k1s98034QZQBbO3WuNeyPYKa+9w2z/W5SFlusdAi8H7IF+s8BaMptEsUZINfxbw==
 
 svelte-hmr@^0.15.1:
   version "0.15.1"

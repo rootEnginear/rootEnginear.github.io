@@ -18,7 +18,7 @@ const getFileName = (url: string | undefined) => {
   {
     allPosts.length > 0 ? (
       allPosts.map((post: any) => (
-        <li class="mb-16">
+        <li class="mb-16 font-bai-jamjuree">
           <a href={`/blog/${getFileName(post.url)}`}>{post.frontmatter.title}</a>
         </li>
       ))
@@ -31,4 +31,17 @@ const getFileName = (url: string | undefined) => {
       >the old blog here</a
     >.
   </p>
+
+  <link
+    data-lazy-font
+    href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree&display=swap"
+    rel="stylesheet"
+    media="print"
+  />
+  <noscript>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree&display=swap"
+      rel="stylesheet"
+    />
+  </noscript>
 </Layout>

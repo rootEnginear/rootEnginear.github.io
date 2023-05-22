@@ -1,6 +1,6 @@
 ---
 import "@/styles/base.css";
-import { DESCRIPTION, TITLE } from "@/data/defaults";
+import { DESCRIPTION, TITLE, OG_PATH, LANG } from "@/data/defaults";
 
 import AppLenis from "@/components/AppLenis.svelte";
 import AppLoadFont from "@/components/AppLoadFont.svelte";
@@ -9,13 +9,20 @@ import AppMouse from "@/components/AppMouse.svelte";
 export interface Props {
   title?: string;
   description?: string;
+  ogPath?: string;
+  lang?: string;
 }
 
-const { title = TITLE, description = DESCRIPTION } = Astro.props;
+const {
+  title = TITLE,
+  description = DESCRIPTION,
+  ogPath = OG_PATH,
+  lang = LANG,
+} = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -46,14 +53,14 @@ const { title = TITLE, description = DESCRIPTION } = Astro.props;
     <meta property="og:url" content="https://rootenginear.github.io/" />
     <meta property="og:title" content={`${title} — All about @rootEnginear`} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content="https://rootenginear.github.io/social.jpg" />
+    <meta property="og:image" content={`https://rootenginear.github.io/${ogPath}`} />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://rootenginear.github.io/" />
     <meta property="twitter:title" content={`${title} — All about @rootEnginear`} />
     <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content="https://rootenginear.github.io/social.jpg" />
+    <meta property="twitter:image" content={`https://rootenginear.github.io/${ogPath}`} />
     <meta name="twitter:label1" value="Web Developer" />
     <meta name="twitter:data1" value="@Punch Up" />
     <meta name="twitter:label2" value="LinkedIn" />
@@ -68,7 +75,7 @@ const { title = TITLE, description = DESCRIPTION } = Astro.props;
     <slot />
 
     <link
-      id="link-font"
+      data-lazy-font
       href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap"
       rel="stylesheet"
       media="print"

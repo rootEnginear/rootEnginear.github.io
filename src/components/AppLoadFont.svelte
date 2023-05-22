@@ -2,6 +2,8 @@
   import { onMount } from "svelte";
 
   onMount(() => {
-    document.getElementById("link-font").setAttribute("media", "all");
+    document
+      .querySelectorAll("[data-lazy-font]")
+      .forEach((el) => el.setAttribute("media", "all"));
   });
 </script>

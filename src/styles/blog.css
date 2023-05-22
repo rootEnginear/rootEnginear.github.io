@@ -1,0 +1,40 @@
+.blog-title {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.blog-content h2 {
+  @apply mt-32 text-3xl font-bold;
+}
+
+.blog-content h3 {
+  @apply text-2xl font-bold;
+}
+
+.blog-content ul {
+  @apply ml-[2ch] list-disc;
+}
+
+.blog-content ol {
+  @apply ml-[2ch] list-decimal;
+}
+
+.blog-content blockquote {
+  @apply border-l-2 border-l-gray-700 py-8 pl-16;
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+  @apply rounded-4 border-none p-0 font-mono;
+}
+
+code[class*="language-"] {
+  @apply p-16;
+}
+
+.blog-content > *:not(header):not(:last-child) {
+  @apply mb-16;
+}
+
+.blog-content a {
+  @apply inline;
+}

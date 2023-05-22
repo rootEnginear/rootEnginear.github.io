@@ -48,22 +48,6 @@ a:focus-visible:has(img) {
   @apply rounded-8 ring-4;
 }
 
-.blog-content p:not(:last-child) {
-  @apply pb-16;
-}
-
-.blog-content strong {
-  @apply font-semibold;
-}
-
-.blog-content h2 {
-  @apply mb-16 mt-64 text-3xl font-bold;
-}
-
-.blog-content h3 {
-  @apply mb-16 mt-64 text-2xl font-bold;
-}
-
 .geo-canvas {
   image-rendering: pixelated;
 }
