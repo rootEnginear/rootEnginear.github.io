@@ -26,11 +26,13 @@ const {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="generator" content={Astro.generator} />
+
+    <title>{title} — All about @rootEnginear</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
+    <meta name="generator" content={Astro.generator} />
     <meta name="apple-mobile-web-app-title" content="rootEnginear" />
     <meta name="application-name" content="rootEnginear" />
     <meta name="msapplication-TileColor" content="#e34234" />
@@ -45,7 +47,6 @@ const {
 
     <link rel="sitemap" href="/sitemap-index.xml" />
 
-    <title>{title} — All about @rootEnginear</title>
     <meta name="description" content={description} />
 
     <!-- OG, FB -->
@@ -78,7 +79,6 @@ const {
       data-lazy-font
       href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap"
       rel="stylesheet"
-      media="print"
     />
     <noscript>
       <link
