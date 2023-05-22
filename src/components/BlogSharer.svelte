@@ -3,7 +3,7 @@
   import { clsx } from "clsx";
 
   export let title: string;
-  export let date: string;
+  export let date: string | undefined;
   let url = "https://rootenginear.github.io/";
 
   let copyBtnText = "Copy URL";
@@ -57,9 +57,11 @@
     target="_blank"
     rel="nofollow noopener noreferrer">Tweet</a
   >
-  <span class="mr-auto">
-    <time datetime={new Date(date).toISOString()}
-      >{new Date(date).toLocaleDateString("en-GB", { dateStyle: "short" })}</time
-    >
-  </span>
+  {#if date}
+    <span class="mr-auto">
+      <time datetime={new Date(date).toISOString()}
+        >{new Date(date).toLocaleDateString("en-GB", { dateStyle: "short" })}</time
+      >
+    </span>
+  {/if}
 </div>

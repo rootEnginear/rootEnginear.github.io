@@ -11,20 +11,22 @@
     );
   });
 
-  export let bg: string;
+  export let bgUrl: string | undefined;
+  export let fgUrl: string | undefined;
   export let title: string;
 
   let elImg: HTMLHeadElement;
 </script>
 
 <header
-  class="-m-32 mb-32 h-[50vh] rounded-16 bg-gray-800 text-5xl font-black leading-normal overflow-hidden"
+  class="-m-32 mb-32 h-[50vh] rounded-16 bg-cover bg-center text-5xl font-black leading-normal overflow-hidden"
+  style:background-image={`url(${bgUrl})`}
 >
-  {#if bg}
+  {#if fgUrl}
     <img
       bind:this={elImg}
       class="absolute top-0 left-0 object-cover w-full h-[75%]"
-      src={bg}
+      src={fgUrl}
       alt=""
       width="960"
       height="640"

@@ -5,16 +5,27 @@ import BlogHeader from "@/components/BlogHeader.svelte";
 import BlogSharer from "@/components/BlogSharer.svelte";
 
 export interface Props {
-  title?: string;
-  headerTitle?: string;
+  title: string;
   description?: string;
   ogPath?: string;
   lang?: string;
-  bg?: string;
   date?: string;
+
+  headerTitle: string;
+  headerForeground?: string;
+  headerBackground?: string;
 }
 
-const { title, headerTitle, description, ogPath, lang, bg, date } = Astro.props;
+const {
+  title,
+  headerTitle,
+  description,
+  ogPath,
+  lang,
+  headerForeground,
+  headerBackground,
+  date,
+} = Astro.props;
 ---
 
 <Root title={title} description={description} ogPath={ogPath} lang={lang}>
@@ -37,9 +48,14 @@ const { title, headerTitle, description, ogPath, lang, bg, date } = Astro.props;
   </div>
 
   <main
-    class="blog-content m-auto max-w-[80ch] p-16 font-sarabun leading-[1.7] md:mt-[--nav-height] lg:mt-64"
+    class="blog-content m-auto max-w-[80ch] p-16 font-bai-jamjuree leading-[1.7] md:mt-[--nav-height] lg:mt-64"
   >
-    <BlogHeader title={headerTitle} bg={bg} client:idle />
+    <BlogHeader
+      title={headerTitle}
+      bgUrl={headerBackground}
+      fgUrl={headerForeground}
+      client:idle
+    />
 
     <slot />
 
@@ -54,13 +70,13 @@ const { title, headerTitle, description, ogPath, lang, bg, date } = Astro.props;
 
   <link
     data-lazy-font
-    href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;700&display=swap"
     rel="stylesheet"
     media="print"
   />
   <noscript>
     <link
-      href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;700&display=swap"
       rel="stylesheet"
     />
   </noscript>

@@ -14,7 +14,6 @@ module.exports = {
         "Bai Jamjuree",
         ...defaultTheme.fontFamily.sans,
       ],
-      sarabun: ["Sarabun", ...defaultTheme.fontFamily.sans],
     },
     spacing: {
       0: "0",
