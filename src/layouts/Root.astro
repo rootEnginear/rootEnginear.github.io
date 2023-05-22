@@ -50,17 +50,17 @@ const {
 
     <!-- OG, FB -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://rootenginear.github.io/" />
+    <meta property="og:url" content={new URL(Astro.url.pathname, Astro.site)} />
     <meta property="og:title" content={`${title} — All about @rootEnginear`} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={`https://rootenginear.github.io/${ogPath}`} />
+    <meta property="og:image" content={new URL(ogPath, Astro.site)} />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://rootenginear.github.io/" />
+    <meta property="twitter:url" content={new URL(Astro.url.pathname, Astro.site)} />
     <meta property="twitter:title" content={`${title} — All about @rootEnginear`} />
     <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={`https://rootenginear.github.io/${ogPath}`} />
+    <meta property="twitter:image" content={new URL(ogPath, Astro.site)} />
     <meta name="twitter:label1" value="Web Developer" />
     <meta name="twitter:data1" value="@Punch Up" />
     <meta name="twitter:label2" value="LinkedIn" />
