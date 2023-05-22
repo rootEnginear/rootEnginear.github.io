@@ -12,31 +12,32 @@ export const frontmatter = {
 
 <BlogLayout
   title={frontmatter.title}
-  headerTitle={frontmatter.title.replace("โปรเจกต์", "โปร⁠เจ⁠กต์")}
   description="มารีวิวกันว่าการใช้ Qwik ในโปรเจกต์ Senate ของ WeVis ที่ผ่านมาเป็นอย่างไรบ้าง มีจุดแข็ง/จุดอ่อน ชอบ/ไม่ชอบอะไรบ้าง"
-  ogPath="blog/senate-qwik-review/og.jpg"
+  ogPath="/blog/senate-qwik-review/og.jpg"
   lang="th-TH"
-  bg="/blog/senate-qwik-review/header.jpg"
   date="2022-09-22T00:00:00.000Z"
+  headerTitle={frontmatter.title.replace("โปรเจกต์", "โปร⁠เจ⁠กต์")}
+  headerForeground="/blog/senate-qwik-review/header-front.webp"
+  headerBackground="/blog/senate-qwik-review/header-back.webp"
 >
   <p>
     <a
       href="https://www.wevis.com/senate"
       target="_blank"
       rel="nofollow noopener noreferrer">โปรเจกต์ Senate ของ WeVis</a
-    > ที่เพิ่งเปิดตัวไปไม่นาน เป็นอีกโปรเจกต์หนึ่งที่อยู่ในความรับผิดชอบของเรา ซึ่งในครั้งนี้เราก็ได้เลือกทดลองที่จะใช้
+    > ที่เพิ่งเปิดตัวไปไม่นาน เป็นอีกโปรเจกต์หนึ่งที่อยู่ในความรับผิดชอบของเรา ในครั้งนี้เราก็ได้เลือกทดลองที่จะใช้
     <a href="https://qwik.builder.io/" target="_blank" rel="nofollow noopener noreferrer"
       >Qwik</a
-    > เป็น Frontend Framework ในการขึ้นงานนี้ขึ้นมา ในบทความนี้เราก็จะมารีวิวกันว่า เออ ใช้แล้วเป็นยังไงบ้าง
-    จุดแข็ง/จุดอ่อน มีอะไรที่ไม่ชอบไหม เผื่อท่านที่เข้ามาอ่านจะได้ตัดสินใจว่าจะลองใช้ในโปรเจกต์ตัวเองหรืออื่นๆ
+    > เป็น Frontend Framework ในการขึ้นงานชิ้นนี้ขึ้นมา ในบทความนี้เราก็จะมารีวิวกันว่า เออ
+    ใช้แล้วเป็นยังไงบ้าง จุดแข็ง/จุดอ่อน มีอะไรที่ชอบ/ไม่ชอบไหม เผื่อท่านที่เข้ามาอ่านจะได้ตัดสินใจว่าจะลองใช้ในโปรเจกต์ตัวเองหรืออื่นๆ
     ในอนาคต
   </p>
 
   <h2>Qwik คืออะไร?</h2>
 
   <p>
-    ถ้าอธิบายสั้นๆ Qwik (ควิก) ก็เป็น Frontend Framework เหมือนกับ React.js, Vue.js,
-    Svelte, Solid.js บลาๆ โดยมี<a
+    ถ้าอธิบายสั้นๆ Qwik (ควิก) ก็เป็น Frontend Framework อันหนึ่งเหมือนกับ React.js,
+    Vue.js, Svelte, Solid.js บลาๆ โดยมี<a
       href="https://qwik.builder.io/docs/think-qwik/"
       target="_blank"
       rel="nofollow noopener noreferrer">จุดเด่น 2 อย่าง (จากหลายอย่าง)</a
@@ -76,29 +77,31 @@ export const Counter = component$(() => {
   </p>
 
   <p>
-    โดยหลักการคร่าวๆ คือตัว Optimizer ของ Qwik จะทำการแตกจุดที่มีสัญลักษณ์ <code>$</code> (ดอลลาร์)
-    ออกไปเป็น Chuck อื่นๆ แล้วค่อยโหลดเข้ามาเมื่อมีความจำเป็น เช่น ถ้าผู้ใช้ยังไม่คลิกที่ปุ่มเพื่อเพิ่ม
+    หลักการคร่าวๆ คือตัว Optimizer ของ Qwik จะทำการแตกจุดที่มีสัญลักษณ์ <code>$</code> (ดอลลาร์)
+    ออกไปเป็น Chuck หนึ่งๆ แล้วค่อยโหลดเข้ามาเมื่อมีความจำเป็น เช่น ถ้าผู้ใช้ยังไม่คลิกที่ปุ่มเพื่อเพิ่ม
     <code>count</code> ก็จะยังไม่โหลด JavaScript อะไรมาเลย เมื่อผู้ใช้คลิกแล้วถึงจะมีการ initiate
-    และ update Signal ให้ถูกต้อง
+    และ update Signal ให้ถูกต้อง ทำให้หน้าเว็บ (ตามทฤษฎีแล้ว) <strong
+      >ไม่ต้องโหลด JavaScript อะไรเลย</strong
+    >
   </p>
 
   <p>
-    ขายมาขนาดนี้แล้วท่านใดต้องการซื้อ เรียนเชิญได้ที่ <a
+    แน่นอนว่าถ้าชูจุดขายเรื่อง Performance แบบนี้ มีหรือที่สาย Optimize แบบเราจะพลาดไปได้
+    พอมีโอกาสในโปรเจกต์นี้ ก็เลยตัดสินใจลองใช้เลย
+  </p>
+
+  <p>
+    ขายมาขนาดนี้แล้ว หากท่านใดต้องการซื้อ เรียนเชิญได้ที่ <a
       href="https://qwik.builder.io/docs/getting-started/"
       target="_blank"
       rel="nofollow noopener noreferrer">Getting Started Qwikly</a
     > เลยจ้า
   </p>
 
-  <p>
-    แน่นอนว่าถ้าชูจุดขายเรื่อง Performance แบบนี้ มีหรือที่สาย Optimize แบบเราจะพลาดไปได้
-    พอมีโอกาสในโปรเจกต์นี้ก็เลยตัดสินใจลองใช้เลย
-  </p>
-
   <h3>Qwik React</h3>
 
   <p>
-    ฟีเจอร์อีกอย่างหนึ่งที่พูดตรงๆ ว่าตอนแรกที่เห็นแล้วรู้สึกว่า &ldquo;เชี่ย
+    ฟีเจอร์อีกอย่างหนึ่งที่พูดตรงๆ ว่าตอนแรกที่เห็นแล้วรู้สึกเลยว่า &ldquo;เชี่ย
     ฉลาดว่ะ&rdquo; และทำให้รู้สึกกล้าที่จะลองใช้ Qwik มากกว่าเดิม คือ Qwik React
     เพราะสิ่งหนึ่งที่ได้เรียนรู้จากการใช้ Framework มาหลายตัวคือ ถ้า Ecosystem ไม่แข็งพอ
     ก็จะกลายเป็นว่าเราต้องมาเสียเวลาทำอะไรที่ Framework อื่นมี หรือที่แย่กว่าคือ มาแก้
@@ -180,8 +183,8 @@ export const QPopover = qwikify$(() => (
   <h2>ใช้แล้วเป็นยังไงบ้าง?</h2>
 
   <p>
-    พูดได้ว่า<strong>ไม่ได้รู้สึกต่างจากการเขียน Solid.js อะไรมาก</strong>ที่ระบบ
-    Reactivity เป็น Signal และเขียนด้วย JSX และฟีเจอร์พื้นฐานก็ไม่ได้ต่างจาก Framework
+    พูดได้ว่า <strong>ไม่ได้รู้สึกต่างจากการเขียน Solid.js อะไรมาก</strong>ที่ระบบ
+    Reactivity เป็น Signal และเขียนด้วย JSX ฟีเจอร์พื้นฐานก็ไม่ได้ต่างจาก Framework
     อะไรอื่น (คือก็ทำ State ได้ แก้ State ได้ เอา State มา If, For ได้ ทำ Effect ได้ ฯลฯ)
     อาจจะเพราะด้วยเนื้องานของ WeVis ส่วนใหญ่ที่ทำเป็น Single-page Interactive
     Scrolly-telling เลยไม่ได้มีความจำเป็นที่จะต้องใช้ฟีเจอร์ลึกๆ เฉพาะๆ มากนัก
@@ -189,8 +192,8 @@ export const QPopover = qwikify$(() => (
 
   <p>
     ข้อดีที่เห็นได้ชัดเลยคือเรื่อง Performance ที่ถึงแม้ว่างานนี้จะไม่ได้ optimize
-    จัดขนาดนั้น (และคิดว่ามีบางจุดที่อาจจะทำให้ดีกว่านี้ได้) เว็บเราก็ยังได้ช่วง 80+/100
-    ในหมวด Performance ของ PageSpeed อยู่ ซึ่งถ้าเปรียบเทียบกับโปรเจกต์ที่ผ่านๆ มา
+    จัดขนาดนั้น (และคิดว่ามีบางจุดที่อาจจะทำให้ดีกว่านี้ได้) เว็บเราก็ยังได้คะแนนในช่วง
+    80+/100 ในหมวด Performance ของ PageSpeed อยู่ ซึ่งถ้าเปรียบเทียบกับโปรเจกต์ที่ผ่านๆ มา
     ถือว่าเป็นคะแนนที่สูงมาก เพราะการทำ Single-page ต่อให้ทำแบบ SSG ออกมา
     ก็มักจะมีปัญหาในเรื่องของความหนักของ Bundle (เนื่องจากต้องยัดทุกอย่างไว้ในหน้าเดียว
     แถมยังมา Hydrate ตอนโหลดใหม่อีก) ที่จะต้องทำการ Lazy Load แบบ Manual ออกมาเอง
@@ -205,14 +208,14 @@ export const QPopover = qwikify$(() => (
     Qwik ทำงานแบบ Server Side Rendering เป็นหลัก คือจะทำการ Render HTML บนเซิฟเวอร์ก่อน 1
     ครั้ง แล้วจึงส่ง HTML มาที่ฝั่งไคลเอนต์ (เบราเซอร์) โดยจะมีความแตกต่างคือ <strong
       >Qwik จะทำการ Serialize ข้อมูล State ต่างๆ มากับ HTML</strong
-    > ด้วย ซึ่งสิ่งนี้เป็นข้อดีของ Qwik ที่ทำให้<a
+    > ด้วย ซึ่งสิ่งนี้เป็นข้อดีของ Qwik ที่ทำให้ <a
       href="https://qwik.builder.io/docs/concepts/resumable/"
       target="_blank"
       rel="nofollow noopener noreferrer">Qwik สามารถรันเว็บได้โดยไม่ต้อง Hydrate</a
     > เหมือน Framework อื่น แต่ด้วย Lifecycle เหล่านี้ ทำให้เกิด Hook 2 ตัวคือ <code
       >useTask$</code
     > ที่รันได้ทั้งเซิฟเวอร์และไคลเอนต์และ
-    <code>useVisibleTask$</code> ที่รันฝั่งไคลเอนต์ ซึ่งต้องทำความเข้าใจและใช้ให้ถูก ยังไม่นับการผูก
+    <code>useVisibleTask$</code> ที่รันฝั่งไคลเอนต์ ที่ต้องทำความเข้าใจและใช้ให้ถูก ยังไม่นับการผูก
     Event ด้วย Hook <code>useOn</code>
     <code>useOnDocument</code>
     <code>useOnWindow</code> อีก ซึ่งมองว่าเป็น Pitfall สำหรับคนที่มาเขียน Qwik ใหม่ๆ ได้ (<a
@@ -224,12 +227,12 @@ export const QPopover = qwikify$(() => (
 
   <p>
     ปัญหาหนึ่งคือ บางครั้งเราต้องผูก Scroll-triggered Animation ไว้กับ Intersection
-    Observer ซึ่งทำให้เกิดปัญหา 2 อย่าง
+    Observer ผ่านการใช้ <code>useVisibleTask$</code> ซึ่งทำให้เกิดปัญหา 2 อย่าง
   </p>
 
   <ol>
     <li>
-      ต้องใช้ <code>useVisibleTask$(/* ... */)</code> ซึ่งทำให้เกิดการ Hydrate (ต่อให้ตั้ง
+      ต้องใช้ <code>useVisibleTask$</code> ซึ่งทำให้เกิดการ Hydrate (ต่อให้ตั้ง
       <code>strategy</code>
       เป็น <code>"intersection-observer"</code> ก็ต้อง Hydrate เพื่อติด Intersection Observer
       อยู่ดี)
@@ -265,17 +268,32 @@ export const QPopover = qwikify$(() => (
   <h2>สิ่งที่ได้/บทสรุป</h2>
 
   <p>
-    โดยภาพรวมแล้ว เรารู้สึกว่า Qwik ก็เป็น Framework
-    ตัวหนึ่งเหมือนกันที่มาเขย่าวงการด้วยแนวคิดใหม่ๆ ที่ให้ความสำคัญของเรื่อง Performance
-    เป็นหลัก รวมทั้งความสามารถที่ทำให้เราสามารถใช้ React.js ควบคู่ไปได้ด้วยการทำ Island
-    ซึ่งน่าจะเป็นจุดที่ดึงดูดให้ Dev หลายๆ คนมาลองใช้
+    โดยภาพรวมแล้ว เราก็รู้สึกว่า Qwik ก็เป็น Framework
+    ตัวหนึ่งเหมือนกันที่มาเขย่าวงการด้วยแนวคิดใหม่ๆ ที่ให้ความสำคัญในเรื่อง Performance
+    เป็นหลัก รวมทั้งความสามารถในการทำ Island ที่ทำให้เราสามารถใช้ React.js ควบคู่กับ Qwik
+    ได้ ที่น่าจะเป็นจุดดึงดูดให้ Dev หลายๆ คนสนใจมาลองใช้กัน
   </p>
 
   <p>
-    อย่างไรก็ตาม ถ้าเปรียบเทียบกันเชิง Ecosystem กับ Community แล้ว
-    ก็ยังค่อนข้างมีความสดใหม่อยู่ รวมทั้งการมาของ Server Component ใน Framework แถวๆ
-    นี้ก็ค่อนข้างมีความน่าสนใจไม่แพ้กัน ก็ต้องมารอดูกันว่าในอนาคต Qwik จะยังมีความ
-    Relevance ขนาดไหน แต่ไม่แน่ว่า Qwik อาจจะเป็นตัวแปรหนึ่งที่ทำให้ Framework อื่นๆ
-    เริ่มหันมาใช้แนวทางแบบนี้กันมากขึ้นก็ได้
+    อย่างไรก็ตาม ถ้าเปรียบเทียบกันเชิง Ecosystem กับ Community แล้ว Qwik
+    ก็ยังค่อนข้างมีความสดใหม่อยู่ ยังไม่นับถึงการมาของ Server Component ใน Framework แถวๆ
+    นี้ที่ค่อนข้างจะมีความน่าสนใจไม่แพ้กัน ทำให้เราคงต้องมารอดูกันว่าในอนาคต Qwik
+    จะยังมีความ Relevance ขนาดไหน แต่ก็ไม่แน่ว่า Qwik อาจจะเป็นตัวแปรหนึ่งที่ทำให้
+    Framework อื่นๆ เริ่มหันมาใช้แนวทางแบบนี้กันมากขึ้นก็ได้
+  </p>
+
+  <p>
+    สำหรับใครที่ซื้อแล้ว สามารถ<a
+      href="https://qwik.builder.io/"
+      target="_blank"
+      rel="nofollow noopener noreferrer"
+      >ทดลองเล่นและศึกษาข้อมูลเพิ่มเติมได้ที่ https://qwik.builder.io/</a
+    > ได้เลย
+  </p>
+
+  <p>
+    <small class="text-sm"
+      >ขอบคุณรูปภาพพื้นหลัง Header จากพี่ทราย ดีไซน์เนอร์ผู้น่ารักประจำงาน Senate ของเรา</small
+    >
   </p>
 </BlogLayout>
