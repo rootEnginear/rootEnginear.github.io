@@ -22,6 +22,7 @@ html {
   overflow-x: hidden;
   line-height: 1.6;
   letter-spacing: 0.2px;
+  scroll-behavior: smooth;
 
   @apply bg-gray-900 selection:bg-accent selection:text-black;
 
@@ -57,12 +58,12 @@ a:focus-visible:has(img) {
 }
 
 /* Lenis */
-html.lenis {
+/* html.lenis {
   height: auto;
 }
 
 .lenis.lenis-stopped {
   overflow: hidden;
-}
+} */
 
 @tailwind utilities;

@@ -19,6 +19,7 @@ export default defineConfig({
       customPages: [
         "https://rootenginear.github.io/tpc-course-planner",
         "https://rootenginear.github.io/25th-parliament-meeting",
+        "https://rootenginear.github.io/26th-parliament-meeting",
         "https://rootenginear.github.io/my-common-patterns",
       ],
     }),
