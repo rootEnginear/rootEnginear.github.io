@@ -14,7 +14,7 @@
     "@astrojs/sitemap": "^1.2.2",
     "@astrojs/svelte": "^2.1.0",
     "@astrojs/tailwind": "^3.1.1",
-    "@studio-freight/lenis": "^1.0.6",
+    "@studio-freight/lenis": "^1.0.27",
     "astro": "^2.1.0",
     "astro-compress": "^1.1.40",
     "astro-critters": "^1.1.33",

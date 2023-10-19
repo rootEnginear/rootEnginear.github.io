@@ -8,62 +8,80 @@
 }
 
 @tailwind base;
+
+@layer base {
+  *,
+  ::before,
+  ::after {
+    position: relative;
+  }
+
+  html {
+    font-feature-settings: "ss04", "case", "zero";
+    color-scheme: dark;
+    overflow-x: hidden;
+    line-height: 1.6;
+    letter-spacing: 0.2px;
+
+    @apply bg-gray-900 selection:bg-accent selection:text-black;
+
+    --nav-height: 152px;
+  }
+
+  code {
+    @apply rounded-4 bg-gray-950 px-4 py-2 text-sm text-accent;
+  }
+
+  a {
+    @apply inline-block underline decoration-accent decoration-dashed decoration-1 underline-offset-2;
+  }
+
+  a:is(:hover, :focus) {
+    @apply decoration-solid decoration-2;
+  }
+
+  a:focus-visible {
+    @apply bg-accent font-bold text-black outline-0 ring-2 ring-accent;
+  }
+
+  a:focus-visible:has(img) {
+    @apply rounded-8 ring-4;
+  }
+}
+
 @tailwind components;
 
-*,
-::before,
-::after {
-  position: relative;
+@layer components {
+  .geo-canvas {
+    image-rendering: pixelated;
+  }
 }
 
-html {
-  font-feature-settings: "ss04", "case", "zero";
-  color-scheme: dark;
-  overflow-x: hidden;
-  line-height: 1.6;
-  letter-spacing: 0.2px;
-  scroll-behavior: smooth;
+@tailwind utilities;
 
-  @apply bg-gray-900 selection:bg-accent selection:text-black;
-
-  --nav-height: 152px;
-}
-
-code {
-  @apply rounded-4 bg-gray-950 px-4 py-2 text-sm text-accent;
-}
-
-a {
-  @apply inline-block underline decoration-accent decoration-dashed decoration-1 underline-offset-2;
-}
-
-a:is(:hover, :focus) {
-  @apply decoration-solid decoration-2;
-}
-
-a:focus-visible {
-  @apply bg-accent font-bold text-black outline-0 ring-2 ring-accent;
-}
-
-a:focus-visible:has(img) {
-  @apply rounded-8 ring-4;
-}
-
-.geo-canvas {
-  image-rendering: pixelated;
-}
-
-.nobr {
-  white-space: nowrap;
+@layer utilities {
+  .nobr {
+    white-space: nowrap;
+  }
 }
 
 /* Lenis */
-/* html.lenis {
+html.lenis {
   height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
 }
 
 .lenis.lenis-stopped {
   overflow: hidden;
-} */
+}
 
-@tailwind utilities;
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
