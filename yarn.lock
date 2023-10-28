@@ -1138,7 +1138,7 @@ array-union@^2.1.0:
   resolved "https://registry.yarnpkg.com/array-union/-/array-union-2.1.0.tgz#b798420adbeb1de828d84acd8a2e23d3efe85e8d"
   integrity sha512-HGyxoOTYUyCM6stUe6EJgnd4EoewAI7zMdfqO+kGjnlZmBDz/cR5pf8r/cR4Wq60sL/p0IkcjUEEPwS3GFrIyw==
 
-astro-compress@^1.1.40:
+astro-compress@^2.1.6:
   version "2.1.6"
   resolved "https://registry.yarnpkg.com/astro-compress/-/astro-compress-2.1.6.tgz#6c873d6733a1c4522bc774d607dbf43a84ade10a"
   integrity sha512-tr9JrAA3Un4PAkR5lSZk7P+SU2d1uA5o/2nQ/9FCQ+fSBzuIsLyqr+Ea8IEvxHPKKelQI2LyXUCt+s4qFzJ0HA==
@@ -1153,7 +1153,7 @@ astro-compress@^1.1.40:
     terser "5.22.0"
     typescript-esbuild "0.3.1"
 
-astro-critters@^1.1.33:
+astro-critters@^2.0.11:
   version "2.0.11"
   resolved "https://registry.yarnpkg.com/astro-critters/-/astro-critters-2.0.11.tgz#1cd9fb8c4c7722e42a1f7d43e1a1a764e5cd1f74"
   integrity sha512-SdFiAbmIJtgDiLTuBddJkmFyTmxlljPBZRBQRPccAXyoQ2IXCCsrhMfogrRk5/hr3Jg4+Ao+bqs7OCYtpdZlpw==
