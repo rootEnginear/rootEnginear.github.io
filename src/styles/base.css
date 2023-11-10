@@ -22,6 +22,7 @@
     overflow-x: hidden;
     line-height: 1.6;
     letter-spacing: 0.2px;
+    text-wrap: pretty;
 
     @apply bg-gray-900 selection:bg-accent selection:text-black;
 
@@ -62,6 +63,10 @@
 @layer utilities {
   .nobr {
     white-space: nowrap;
+  }
+
+  .text-balance {
+    text-wrap: balance;
   }
 }
 
