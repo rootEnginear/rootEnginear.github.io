@@ -6,9 +6,9 @@ module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     fontFamily: {
-      sans: ["Space Grotesk Variable", ...defaultTheme.fontFamily.sans],
-      serif: ["Space Grotesk Variable", ...defaultTheme.fontFamily.serif],
-      mono: ["Jetbrains Mono", ...defaultTheme.fontFamily.mono],
+      sans: ["Space Grotesk Variable", "Bai Jamjuree", ...defaultTheme.fontFamily.sans],
+      serif: ["Space Grotesk Variable", "Bai Jamjuree", ...defaultTheme.fontFamily.serif],
+      mono: ["Jetbrains Mono", "Bai Jamjuree", ...defaultTheme.fontFamily.mono],
       "bai-jamjuree": [
         "Space Grotesk Variable",
         "Bai Jamjuree",
