@@ -14,14 +14,19 @@ const { title, description, src, website, github } = Astro.props;
 const masterUrl = website || github;
 ---
 
-<article class="mb-32 last:mb-0">
-  <a class="mb-16" href={masterUrl} target="_blank" rel="nofollow noopener noreferrer">
+<article class="mb-32 gap-16 last:mb-0 xl:flex">
+  <a
+    class="order-1 mb-16"
+    href={masterUrl}
+    target="_blank"
+    rel="nofollow noopener noreferrer"
+  >
     <img
-      class="inline-block aspect-video h-auto w-full max-w-[400px] rounded-8 object-contain"
+      class="inline-block aspect-video h-auto w-full max-w-[400px] md:max-w-[250px] rounded-8 object-contain"
       src={src}
       alt=""
-      width="400"
-      height="225"
+      width="250"
+      height="140.625"
       loading="lazy"
       decoding="async"
       title={sanitizeHtml(title, {
@@ -30,30 +35,32 @@ const masterUrl = website || github;
       })}
     />
   </a>
-  <h3 class="text-balance mb-4 text-xl font-medium">
-    <a
-      href={masterUrl}
-      target="_blank"
-      rel="nofollow noopener noreferrer"
-      set:html={title}
-    />
-  </h3>
-  <p class="mb-4" set:html={description} />
-  <footer class="text-sm">
-    — {
-      website && (
-        <a href={website} target="_blank" rel="nofollow noopener noreferrer">
-          <span class="sr-only">Go to</span>Website
-        </a>
-      )
-    }
-    {website && github && "|"}
-    {
-      github && (
-        <a href={github} target="_blank" rel="nofollow noopener noreferrer">
-          <span class="sr-only">Open the repository on</span>GitHub
-        </a>
-      )
-    }
-  </footer>
+  <div class="flex-1">
+    <h3 class="text-balance mb-4 text-xl font-medium">
+      <a
+        href={masterUrl}
+        target="_blank"
+        rel="nofollow noopener noreferrer"
+        set:html={title}
+      />
+    </h3>
+    <p class="mb-4" set:html={description} />
+    <footer class="text-sm">
+      — {
+        website && (
+          <a href={website} target="_blank" rel="nofollow noopener noreferrer">
+            <span class="sr-only">Go to</span>Website
+          </a>
+        )
+      }
+      {website && github && "|"}
+      {
+        github && (
+          <a href={github} target="_blank" rel="nofollow noopener noreferrer">
+            <span class="sr-only">Open the repository on</span>GitHub
+          </a>
+        )
+      }
+    </footer>
+  </div>
 </article>
