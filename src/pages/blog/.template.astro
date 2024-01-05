@@ -1,19 +1,12 @@
 ---
 import BlogLayout from "@/layouts/BlogLayout.astro";
-import BlogTitle from "@/components/BlogTitle.svelte";
 
 export const frontmatter = {
   title: "template",
 };
 ---
 
-<BlogLayout title={frontmatter.title}>
-  <header
-    class="-m-32 mb-32 h-[50vh] rounded-16 bg-gray-950 text-5xl font-black leading-normal"
-  >
-    <BlogTitle title={frontmatter.title} client:idle />
-  </header>
-
+<BlogLayout title={frontmatter.title} headerTitle={frontmatter.title}>
   <p>
     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure aut optio impedit
     rerum, maiores ullam possimus minus repellat tempora numquam dolorem quaerat,
