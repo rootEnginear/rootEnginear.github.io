@@ -4,23 +4,25 @@
   import { balancer } from "svelte-action-balancer";
 
   onMount(() => {
-    scroll(
-      animate(elImg, {
-        transform: ["translateY(0)", "translateY(640px)"],
-      })
-    );
+    if (elImg) {
+      scroll(
+        animate(elImg, {
+          transform: ["translateY(0)", "translateY(640px)"],
+        })
+      );
+    }
   });
 
-  export let bgUrl: string | undefined;
-  export let fgUrl: string | undefined;
+  export let bgUrl: string | undefined = "";
+  export let fgUrl: string | undefined = "";
   export let title: string;
 
-  let elImg: HTMLHeadElement;
+  let elImg: HTMLImageElement;
 </script>
 
 <header
   class="-m-32 mb-32 h-[50vh] rounded-16 bg-cover bg-center text-5xl font-black leading-normal overflow-hidden"
-  style:background-image={`url(${bgUrl})`}
+  style:background-image={bgUrl ? `url(${bgUrl})` : ""}
 >
   {#if fgUrl}
     <img

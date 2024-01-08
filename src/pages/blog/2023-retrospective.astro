@@ -1,0 +1,114 @@
+---
+import BlogLayout from "@/layouts/BlogLayout.astro";
+import ProjectCard from "@/components/blog/2023-retro/ProjectCard.astro";
+import Chart from "@/components/blog/2023-retro/Chart.svelte";
+
+export const frontmatter = {
+  title: "2023 Retrospective",
+};
+---
+
+<BlogLayout
+  title={frontmatter.title}
+  headerTitle={frontmatter.title}
+  headerBackground="/blog/senate-qwik-review/header-back.webp"
+>
+  <p>เอาจริงๆ ปี 2023 เป็นปีที่ไม่คาดคิดคาดฝันอะไรหลายๆ อย่างอีกปี</p>
+  <section>
+    <h2 class="mb-8">💼 การงาน</h2>
+    <p class="mb-16">
+      ปีนี้ทำงานที่ Punch Up ครบ 1 ปี ทำงานไปทั้งหมด 6 โปรเจกต์หลัก 4 โปรเจกต์ย่อย
+    </p>
+    <div class="mb-16 flex gap-16">
+      <div class="flex-[2_2_0]">
+        <h3>4 Punch Up projects:</h3>
+        <div class="grid grid-cols-2 gap-16">
+          <ProjectCard
+            month="NOV"
+            og="http://schoolgov.actai.co/og.png"
+            title="โรงเรียนโปร่งใส"
+            fw="SvelteKit"
+          />
+          <ProjectCard
+            month="FEB"
+            og="https://thevisual.thaipbs.or.th/projects/HomeAndHope/og.png"
+            title="Home & Hope"
+            fw="SolidStart"
+          />
+          <ProjectCard
+            month="JUN"
+            og="https://poldata.actai.co/og.png"
+            title="ACT Ai Politics Data"
+            fw="NextJS"
+          />
+          <ProjectCard
+            month="OCT"
+            og="https://theactive.net/dataviz/taxation/og.jpg"
+            title="Taxation"
+            fw="SvelteKit"
+          />
+        </div>
+      </div>
+      <hr class="h-auto w-1 border-r border-t-0 border-r-gray-500" />
+      <div class="flex flex-1 flex-col">
+        <h3>2 WeVis projects:</h3>
+        <div class="flex flex-col gap-16">
+          <ProjectCard
+            month="SEP"
+            og="https://wevis.info/law-watch/og.png"
+            title="Law Watch"
+            fw="SvelteKit"
+          />
+          <ProjectCard
+            month="MAR"
+            og="https://wevis.info/senate/og.png"
+            title="Senate"
+            fw="Qwik"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="mb-16">
+      <h3 class="mb-8">4 minor projects</h3>
+      <div class="flex gap-16">
+        <ProjectCard
+          og="https://theyworkforus.wevis.info/seo/share/default.png"
+          title="They Work For Us"
+        />
+        <ProjectCard
+          og="https://parliament-watch.pages.dev/images/og.png"
+          title="Parliament Watch"
+        />
+        <ul class="flex-1">
+          <li>📐 WeVis Design System</li>
+          <li>🧀 Cheesy Migration</li>
+        </ul>
+      </div>
+    </div>
+    <h3 class="mb-16">Visualization ที่ชอบที่สุด</h3>
+    <div class="flex gap-16">
+      <img
+        class="h-auto w-full min-w-0 flex-1"
+        src="/blog/2023-retro/law-watch.png"
+        alt=""
+      />
+      <img
+        class="h-auto w-full min-w-0 flex-1"
+        src="/blog/2023-retro/home-and-hope.png"
+        alt=""
+      />
+    </div>
+  </section>
+  <section>
+    <h2 class="mb-16">🏝 ชีวิต</h2>
+    <Chart client:idle />
+    <p>
+      อาจจะเห็นว่ามีเรื่องไม่ดีมีไม่มาก แต่จริงๆ แล้วมีอีกหลายวันที่รู้สึกแย่ และหลายๆ
+      วันที่รู้สึกดี ก็อาจจะรู้สึกดีอยู่แค่ชั่วขณะ
+    </p>
+  </section>
+  <section>
+    <h2 class="mb-16">🏆 เป้าหมายในชีวิต</h2>
+    <img src="/blog/2023-retro/goal.svg" alt="" />
+  </section>
+</BlogLayout>
