@@ -6,7 +6,7 @@ const { month, og, title, fw } = Astro.props;
   {month && <h4>{month}</h4>}
   <figure class="relative">
     <img
-      class="aspect-video h-[140px] w-auto object-cover"
+      class="h-[140px] w-full object-cover"
       src={og}
       alt={title}
       title={title}
@@ -29,6 +29,6 @@ const { month, og, title, fw } = Astro.props;
         />
       )
     }
-    <figcaption class="mt-2">{title}</figcaption>
+    <figcaption class="mt-4 text-sm">{title}</figcaption>
   </figure>
 </article>

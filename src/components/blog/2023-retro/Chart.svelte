@@ -262,17 +262,20 @@
   const FOOD_LIST = ["MoMo Paradise", "Gogida", "WaQ", "สุกี้ตี๋น้อย", "Simon Shabu"];
 </script>
 
-<div class="flex gap-32 justify-center">
-  <div bind:this={elChart} class="w-[135px] h-[750px] mb-16"></div>
+<div class="flex flex-col justify-center gap-32 md:flex-row">
+  <div
+    bind:this={elChart}
+    class="flex-none w-[135px] h-[750px] mb-16 mx-auto md:mx-0"
+  ></div>
   <div class="flex flex-col gap-32">
-    <p class="text-2xl font-bold">เจอ Impacted Event 21 ครั้ง 37 วัน</p>
+    <p class="text-2xl font-bold">มี Impacted Event 21 ครั้ง 37 วัน</p>
     <article>
       <h3>ไปเที่ยว 5 ที่</h3>
       <ul>
         {#each TRAVEL_LIST as place}
           <li>
             <button
-              class="underline decoration-dashed decoration-1 hover:decoration-solid"
+              class="text-left underline decoration-dashed decoration-1 hover:decoration-solid"
               on:mouseover={() => showImpactedData(place)}
               on:focus={() => showImpactedData(place)}
               on:mouseout={() => showImpactedData()}
@@ -288,7 +291,7 @@
         {#each FIRST_TIME as firsttime}
           <li>
             <button
-              class="underline decoration-dashed decoration-1 hover:decoration-solid"
+              class="text-left underline decoration-dashed decoration-1 hover:decoration-solid"
               on:mouseover={() => showImpactedData(firsttime)}
               on:focus={() => showImpactedData(firsttime)}
               on:mouseout={() => showImpactedData()}
@@ -304,7 +307,7 @@
         {#each FOOD_LIST as food}
           <li>
             <button
-              class="underline decoration-dashed decoration-1 hover:decoration-solid"
+              class="text-left underline decoration-dashed decoration-1 hover:decoration-solid"
               on:mouseover={() => showImpactedData(food)}
               on:focus={() => showImpactedData(food)}
               on:mouseout={() => showImpactedData()}
