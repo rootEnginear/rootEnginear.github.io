@@ -12,7 +12,7 @@ const { month, og, title, fw, url } = Astro.props;
     {month && <h4>{month}</h4>}
     <figure class="relative">
       <img
-        class="h-[140px] w-full object-cover"
+        class="h-[160px] w-full object-cover md:h-[140px]"
         src={og}
         alt={title}
         title={title}
@@ -24,7 +24,7 @@ const { month, og, title, fw, url } = Astro.props;
       {
         fw && (
           <img
-            class="absolute right-4 top-[104px] h-32 w-32 drop-shadow"
+            class="absolute right-4 top-[124px] h-32 w-32 drop-shadow md:top-[104px]"
             src={`/blog/2023-retro/${fw}.svg`}
             alt={fw}
             title={fw}
