@@ -1,34 +1,41 @@
 ---
-const { month, og, title, fw } = Astro.props;
+const { month, og, title, fw, url } = Astro.props;
 ---
 
-<article class="flex flex-1 flex-col gap-4">
-  {month && <h4>{month}</h4>}
-  <figure class="relative">
-    <img
-      class="h-[140px] w-full object-cover"
-      src={og}
-      alt={title}
-      title={title}
-      width="289"
-      height="140"
-      loading="lazy"
-      decoding="async"
-    />
-    {
-      fw && (
-        <img
-          class="absolute right-4 top-[104px] h-32 w-32 drop-shadow"
-          src={`/blog/2023-retro/${fw}.svg`}
-          alt={fw}
-          title={fw}
-          width="32"
-          height="32"
-          loading="lazy"
-          decoding="async"
-        />
-      )
-    }
-    <figcaption class="mt-4 text-sm">{title}</figcaption>
-  </figure>
-</article>
+<a
+  class="flex-1 no-underline"
+  href={url}
+  target="_blank"
+  rel="nofollow noopener noreferrer"
+>
+  <article class="flex flex-col gap-4">
+    {month && <h4>{month}</h4>}
+    <figure class="relative">
+      <img
+        class="h-[140px] w-full object-cover"
+        src={og}
+        alt={title}
+        title={title}
+        width="289"
+        height="140"
+        loading="lazy"
+        decoding="async"
+      />
+      {
+        fw && (
+          <img
+            class="absolute right-4 top-[104px] h-32 w-32 drop-shadow"
+            src={`/blog/2023-retro/${fw}.svg`}
+            alt={fw}
+            title={fw}
+            width="32"
+            height="32"
+            loading="lazy"
+            decoding="async"
+          />
+        )
+      }
+      <figcaption class="mt-4 text-sm">{title}</figcaption>
+    </figure>
+  </article>
+</a>
