@@ -1,1 +1,0 @@
-import{S as o,i as a,s as n,o as s}from"./index.2c8f3814.js";function l(e){return s(()=>{document.querySelectorAll("[data-lazy-font]").forEach(t=>t.setAttribute("media","all"))}),[]}class u extends o{constructor(t){super(),a(this,t,l,null,n,{})}}export{u as default};
