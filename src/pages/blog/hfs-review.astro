@@ -1,0 +1,355 @@
+---
+import BlogLayout from "@/layouts/BlogLayout.astro";
+import Spoiler from "@/components/blog/Spoiler.astro";
+import BigSpoiler from "@/components/blog/BigSpoiler.astro";
+
+export const frontmatter = {
+  title: "[EN] Hiragana Forbidden Speech Review",
+  date: "2024-02-17T00:00:00.000Z",
+};
+---
+
+<BlogLayout
+  title={frontmatter.title}
+  description="My thoughts after playing this game. Does it really hold up to my experience?"
+  ogPath="/blog/hfs-review/og.jpg"
+  lang="en-US"
+  date="2024-02-17T00:00:00.000Z"
+  headerTitle="Hiragana Forbidden Speech Review"
+  headerBackground="/blog/hfs-review/header-back.webp"
+  headerForeground="/blog/hfs-review/header-front.webp"
+  class="font-japanese"
+>
+  <p>
+    Some days ago, I saw <a
+      href="https://www.facebook.com/NEWSCatDumb/posts/pfbid02NJFhFEesnzRBvSYrso3SPc2qSn29MpaSviAHCxBhstEyHFFqWwseDLz8gCzBCRDol"
+      target="_blank"
+      rel="nofollow noopener noreferrer">a Facebook post</a
+    > about an RPG game called <a
+      href="https://store.steampowered.com/app/1114950/Learn_Japanese_RPG_Hiragana_Forbidden_Speech/"
+      target="_blank"
+      rel="nofollow noopener noreferrer">"Hiragana Forbidden Speech"</a
+    >. The trailer looks promising and does showcase some interesting mechanics. So I
+    decided to play it. <span class="nobr">But does it really</span> hold up to my experience?
+  </p>
+
+  <blockquote>
+    This review is, at the same time, a retrospective. There will be a lot of suggestions
+    from me as a player perspective. This ultimately results in spoiling the game a lot.
+    In those cases, I'll put up a <Spoiler>Peek-a-boo!</Spoiler>, so that you could read
+    this blog as if it's just a review.
+  </blockquote>
+
+  <h2>Foreword</h2>
+  <p>
+    As a former RMXP developer, I know how hard it is to put this game together when the
+    engine is so limited. So, kudos to you, Lun-さま! And despite those limitations, the
+    game itself is amazingly well put together! In this review, I will share my honest
+    thoughts, some of which might be super hard to implement in RMXP. I just hope that for
+    the next project, maybe with another engine, the developer can use these points and
+    feedback to improve the next game.
+  </p>
+
+  <h2>My Background</h2>
+  <p>
+    Before playing the game, I'd had some experience with Japanese. My native language is
+    Thai, but I normally use English online, so my English is somewhat good. I studied
+    Japanese a bit in my final year of university and don't ever use it again for like 1–2
+    years. Then, I went to Japan and felt like a fool who just made people's lives
+    たいへん (difficult). So, I started to learn a bit (slowly but surely) on Duolingo.
+  </p>
+  <p>So basically: こんにちは, ありがとう, すみません, たいへんですね, and that's it.</p>
+  <p>
+    As for my gameplay style, I love to know everything about the story and the plot, so I
+    tend to walk around the map to make sure I cover everything. One downside is that I
+    will get a random encounter quite frequently (I'll cover this in <a
+      href="#gameplay-and-learning-mechanics">Gameplay and Learning Mechanics</a
+    > section). Luckily, you can adjust it with the <kbd>Q</kbd> and <kbd>Z</kbd> keys. I adjusted
+    it to -1 or -2 in my gameplay. I don't take any notes, and I only try to rely on my memorization.
+    So, I will do 2–3 encounters, be fustrated that I forgot new words and there are already
+    newer words, go back to the words menu and memorize them, then use them in the following
+    battle. My playthrough is about 15 hours.
+  </p>
+
+  <h2>Content and Target Audience</h2>
+
+  <h3>Story</h3>
+  <p>
+    The story is about かい (Kai), the protagonist, adventuring into the world to uncover
+    Hiragana — the forbidden speech. You will get to talk with NPCs, explore places, fight
+    off monsters, and learn words and grammar.
+  </p>
+  <p>
+    Despite the engine limitations and a small number of activities in this game, the game
+    itself doesn't feel that repetitive (kudos to the game designer). And honestly, even
+    though the story is quite linear and the "punch" is not that intense, most of the time
+    you'll be focusing on the learning part. So, I think it's fair to say that it's
+    acceptable and balanced.
+  </p>
+  <p>Furthermore, I would love to see the continuation of the story:</p>
+  <BigSpoiler>
+    <ul>
+      <li>
+        What will happen to Nestor? Is he planning to do anything further to achive his
+        "ideal" world?
+      </li>
+      <li>
+        How did people get back into their normal form? How does the "effect" wear off?
+      </li>
+      <li>What about Bram? What will Ben, the angel, and he do together?</li>
+    </ul>
+  </BigSpoiler>
+
+  <h3>Scope</h3>
+  <p>
+    This game covers a lot of words and grammar that I think are especially useful for
+    reading manga (even the game itself points out that you might find some of the
+    expressions they taught you frequently in manga). So, will this game cover the whole
+    N5? No. Reading mangas? Maybe. Besides, the game didn't cover any Katakanas or Kanjis.
+  </p>
+
+  <h3>Cultural Aspects</h3>
+  <p>
+    I love that the game will tell you whether the expression is polite, casual, or rough.
+    Even though the words taught in the game are pretty rough (like おまえ, おれ) — but
+    hey! I bet those are frequent in manga, right?
+  </p>
+  <p>
+    To help the player get to use more formal expressions, maybe a multiple-choice
+    selection when speaking with NPCs would help. So they can know what language they
+    should use, whether the listener is an elder, young, close, or stranger.
+  </p>
+
+  <h3>Target Audience</h3>
+  <p>
+    Definitely beginners with some or no knowledge of Japanese. Maybe you want to get some
+    basic ideas, or at least understand Japanese expressions. Maybe you are a returning
+    student like I am or have been memorizing phrases from a translator, manga, or guide
+    book and want to learn the actual language. Or perhaps you didn't enjoy the old way of
+    memorizing words. I definitely recommend this game.
+  </p>
+
+  <h3>Value for Money</h3>
+  <p>
+    I'm really glad the developer priced it at 200 THB (5.55 USD) and not 19.99 THB
+    (720.38 THB). I personally think that it's a reasonable price to save up money to pay
+    for the full version.
+  </p>
+  <blockquote>
+    <span class="font-bold">To put it in perspective,</span> the average income <em
+      >per day</em
+    >
+    for a person working in Bangkok is 278 THB (7.71 USD), one meal is about 60 THB (1.66 USD).
+  </blockquote>
+
+  <h2 id="gameplay-and-learning-mechanics">Gameplay and Learning Mechanics</h2>
+
+  <h3>Engagement</h3>
+  <p>
+    It's really engaging for me since my gameplay style is story-oriented. The learning
+    materials are integrated and hidden relatively well in the story. And since if you
+    learn more words in the game, more dialogues will be in Japanese, it's darn super
+    effective for a person who wants to see every dialogue in Japanese.
+  </p>
+
+  <h3>Pacing, Variety, and Effectiveness</h3>
+  <p>
+    I kind of wanted to separate these topics when I was writing this article. But the
+    more I write, the more these subjects become interrelated. So, let's see what
+    happened.
+  </p>
+
+  <h4>Hiraganas and Words</h4>
+  <p>
+    The main mechanic of learning a new word is a random encounter. Basically, if you walk
+    for a bit, the game will put you in a battle with a monster, which will quiz you.
+    After that, if you gain enough XP, you will grant new kanas or words.
+  </p>
+  <p>
+    These random encounters, in my opinion, are great! Since it will force you to memorize
+    words and their meanings (which you can also adjust to, as I said earlier), To make
+    them more effective, here are some suggestions to improve them:
+  </p>
+  <BigSpoiler>
+    <ul>
+      <li>
+        Still show a previous incorrect word until that word come up again or the player
+        answer another word wrong. So if the player answer the following words correctly,
+        the incorrect word will be shown longer.
+      </li>
+      <li>Show the mistakes after the battle, so the player can review those words.</li>
+      <li>
+        (I know this is hard to implement but it's an idea) Use the <a
+          href="https://en.wikipedia.org/wiki/Forgetting_curve"
+          target="_blank"
+          rel="nofollow noopener noreferrer">"forgetting curve"</a
+        > to select the word showing in the battle. Currently, the game use "level" system
+        where the more you answer that word correct it will rarely show up again (and vice
+        versa). This is a good compromise to the engine but it's not perfect. The player can
+        just remember the words for a short period and then forget them since now they are
+        rarely shown up in battles.
+      </li>
+      <li>
+        <del class="no-underline opacity-50">
+          Maybe the enemy won't attack you until you answer the first question, so that
+          you can gather thoughts.
+        </del> My bad, I recently just know about the "warm up" mode. Big facepalm.
+      </li>
+      <li>Hard mode: you must press <kbd>Enter</kbd> to submit the answer.</li>
+    </ul>
+  </BigSpoiler>
+  <p>
+    Of course that, in RPGs, you are going to have a long walk. In this game, you will get
+    to hike a massive mountain, explore a spooky cave, sail through a vast ocean, and
+    fight a grusome desert. Gorgeous landscapes! However, there is one problem — <strong
+      >a long walk map can get boring really fast</strong
+    >.
+  </p>
+  <p>
+    I know that it's a good way to ensure that the player will have learned more words
+    before the next main story point (also, there are a bunch of checkpoints to make sure
+    you have learned sufficient words). Navigating them could be tiresome. So, I tried to
+    come up with some solutions:
+  </p>
+  <BigSpoiler>
+    <ul>
+      <li>
+        <span class="font-bold">Companions:</span> We already got Lenore but for some reason
+        she loves to be on her own. If the main story doesn't required her to do that (meaning
+        that she doesn't have a real reason to "stay ahead" of the protagonist), then we could
+        use her as a companion that could assist the player on their learning.
+      </li>
+      <li>
+        <span class="font-bold">NPCs:</span> In my opinion, the NPCs are quite shallow and
+        doesn't do much. Maybe they can help us to learn more words or grammar points.
+      </li>
+      <li>
+        <span class="font-bold">Side Quests:</span> Maybe I can get side quests to learn more
+        words without having to battling with shinreis or monsters. At the start of the story,
+        there are many "fetch key unlock door" activities, maybe we can use that for this too.
+      </li>
+    </ul>
+  </BigSpoiler>
+  <p>
+    Finally, a little thing: I feel that some words like いそがしい and おもしろい are
+    often used. Maybe we can give them to the player earlier.
+  </p>
+
+  <h4>Grammars</h4>
+  <p>
+    Not only learning hiraganas and words is one of the strengths of this game. This game
+    also includes a lot of grammar points for you to learn (40-ish if I recall
+    correctly!).
+  </p>
+  <p>
+    The main problem with the grammar points is that this game doesn't actively encourage
+    you to <em>remember</em> them. You kind of just learn what they are, and you're done. For
+    this problem, I've come up with some solutions:
+  </p>
+  <BigSpoiler>
+    <ul>
+      <li>
+        Waiting for the grammar crystal/cave is quite unintuitive. So it would be better
+        if it's directly in a menu.
+      </li>
+      <li>
+        The quiz lady is a good idea. But I think the dev might be able to spread the
+        quizes to other NPCs/quests too. Also, I think the player should be able to cancel
+        the quiz at anytime, because when you answer incorrectly at the beginning of a
+        19-question quiz, it's たいへん ひどい (awfully awful) .
+      </li>
+      <li>Maybe a grammar checkpoints?</li>
+    </ul>
+  </BigSpoiler>
+
+  <p>
+    Another thing is that, the pacing for grammar is super rushed at the end of the story.
+    Now, not only will you get bombarded with kanas and words, but also grammar with many
+    details to cover. It would definitely be better to distribute it more evenly
+    throughout the story.
+  </p>
+
+  <p>
+    On the bright side, those grammars do have a handful of examples, and you will be able
+    to let the NPC explain them to you again without scolding you. This creates some sense
+    of comfort zone for a learner like me who tends to not ask someone to explain things
+    again, being afraid to get annoyed.
+  </p>
+
+  <p>
+    Overall, the learning curve for both words and grammar is, to me, okay. So, you would
+    definitely survive even if you were absolutely new to Japanese.
+  </p>
+
+  <h3>Performance and Quality of Life</h3>
+  <p>
+    Most of the time the game runs buttery smooth. I've experienced some FPS drops when
+    the game is loading sounds or assets. Most of the massive FPS drops I found are:
+  </p>
+  <ul>
+    <li>When answering multiple-choice questions.</li>
+    <li>Hiragana tutorial in <Spoiler>the "happy place"</Spoiler>.</li>
+  </ul>
+  <p>There are also some suggestions to improve the quality of life for the player:</p>
+  <BigSpoiler>
+    <ul>
+      <li>
+        Sometimes I press the <kbd>X</kbd> key too fast, I wish I could go back to the previous
+        dialogue.
+      </li>
+      <li>
+        The "secret" way sometimes isn't obvious enough. I know it suppose to be "secret"
+        but if it's not obvious of how I can achive it it's going to lead to fustrations.
+      </li>
+      <li>
+        I wish the game menu will show how much the player has progressed (through out the
+        story), where they are, and what do they have to do.
+      </li>
+      <li>
+        The overall music is properly selected. There are some instances where the music
+        is very distracting in battle and I have difficulty focusing on answering the
+        question.
+      </li>
+      <li>
+        I would love to have an option for auto fullscreen or not. I am more of a windowed
+        person.
+      </li>
+      <li>Some screen tones put quite a strain on the eyes.</li>
+      <li>Shift to run</li>
+      <li>Minimap</li>
+    </ul>
+  </BigSpoiler>
+
+  <h2>Overall</h2>
+  <p>
+    To be honest, this is my first time writing a review for a game like this, and I'm
+    really glad to do it. Hiragana Forbidden Speech, despite minor inconveniences, does
+    its intended job exceptionally well and is one of the most unique and beautifully
+    handcrafted game that I've ever played.
+  </p>
+  <p>
+    So, if you are interested in learning Japanese, I can definitely say that this game is
+    going to be worth your money and time. It's alright if you are still not sure; after
+    all, this review is only a reflection of my opinion. You can download and try the demo
+    yourself on <a
+      href="https://store.steampowered.com/app/1114950/Learn_Japanese_RPG_Hiragana_Forbidden_Speech/"
+      target="_blank"
+      rel="nofollow noopener noreferrer">this Steam page</a
+    > and decide if it fits you. I hope that, in the future, the developer will continue this
+    series so that we can learn more about Japanese in this enjoyable way.
+  </p>
+  <p>Thank you for reading!</p>
+
+  <link
+    data-lazy-font
+    href="https://fonts.googleapis.com/css2?family=M+PLUS+1&display=swap"
+    rel="stylesheet"
+    media="print"
+  />
+  <noscript>
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+1&display=swap"
+      rel="stylesheet"
+    />
+  </noscript>
+</BlogLayout>

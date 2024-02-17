@@ -14,6 +14,12 @@ module.exports = {
         "Bai Jamjuree",
         ...defaultTheme.fontFamily.sans,
       ],
+      japanese: [
+        "Space Grotesk Variable",
+        "Bai Jamjuree",
+        '"M PLUS 1"',
+        ...defaultTheme.fontFamily.sans,
+      ],
     },
     spacing: {
       0: "0",

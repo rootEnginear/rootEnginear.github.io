@@ -1,0 +1,16 @@
+<details class="group relative inline-block rounded-4 bg-gray-950 px-4 py-1 text-sm">
+  <summary class="z-10 cursor-pointer select-none group-open:absolute group-open:inset-0"
+    ><span class="group-open:hidden">Spoiler</span></summary
+  >
+  <slot />
+</details>
+
+<style>
+  summary {
+    list-style: none;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+</style>

@@ -25,7 +25,7 @@
     "sanitize-html": "^2.10.0",
     "svelte": "^3.54.0",
     "svelte-action-balancer": "^1.0.4",
-    "tailwindcss": "^3.0.24",
+    "tailwindcss": "^3.4.1",
     "three": "^0.151.3"
   },
   "devDependencies": {

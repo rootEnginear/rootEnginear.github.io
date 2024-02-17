@@ -12,6 +12,10 @@
   @apply text-2xl font-bold;
 }
 
+.blog-content h4 {
+  @apply text-xl font-bold;
+}
+
 .blog-content ul {
   @apply ml-[2ch] list-disc;
 }
@@ -39,4 +43,9 @@ code[class*="language-"] {
 
 .blog-content a {
   @apply inline;
+}
+
+.blog-content kbd {
+  @apply relative -top-1 inline-flex items-center justify-center rounded-4 border border-gray-700 bg-gray-950 px-4 py-1 font-mono text-sm text-gray-200 shadow-gray-950;
+  box-shadow: 0 1px 0 1px var(--tw-shadow-color);
 }

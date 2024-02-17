@@ -1,0 +1,16 @@
+<details class="rounded-4 bg-gray-950 p-4 px-8">
+  <summary class="cursor-pointer select-none">Big Spoiler!</summary>
+  <div class="my-4">
+    <slot />
+  </div>
+</details>
+
+<style>
+  summary {
+    list-style: none;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+</style>

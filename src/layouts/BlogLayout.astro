@@ -16,6 +16,8 @@ export interface Props {
   headerBackground?: string;
   fullHeaderFg?: boolean;
   reversed?: boolean;
+
+  class?: string;
 }
 
 const {
@@ -29,6 +31,7 @@ const {
   date,
   fullHeaderFg,
   reversed,
+  class: className,
 } = Astro.props;
 ---
 
@@ -52,7 +55,8 @@ const {
   </div>
 
   <main
-    class="blog-content m-auto max-w-[80ch] p-16 font-bai-jamjuree leading-[1.7] md:mt-[--nav-height] lg:mt-64"
+    class={"blog-content m-auto max-w-[80ch] p-16 font-bai-jamjuree leading-[1.7] md:mt-[--nav-height] lg:mt-64 " +
+      className}
   >
     <BlogHeader
       title={headerTitle}

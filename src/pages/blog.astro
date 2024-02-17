@@ -4,7 +4,10 @@ import Layout from "@/layouts/Layout.astro";
 
 let allPosts: AstroInstance[] = [];
 try {
-  allPosts = await Astro.glob("./blog/*.astro");
+  allPosts = (await Astro.glob("./blog/*.astro")).sort(
+    (aPost: any, zPost: any) =>
+      new Date(zPost.frontmatter.date) - new Date(aPost.frontmatter.date)
+  );
 } catch (e) {}
 
 const getFileName = (url: string | undefined) => {
@@ -15,17 +18,19 @@ const getFileName = (url: string | undefined) => {
 
 <Layout title="Blog" description="">
   <h2 class="mb-16 text-4xl font-bold">Articles</h2>
-  {
-    allPosts.length > 0 ? (
-      allPosts.map((post: any) => (
-        <li class="mb-16 font-bai-jamjuree">
-          <a href={`/blog/${getFileName(post.url)}`}>{post.frontmatter.title}</a>
-        </li>
-      ))
-    ) : (
-      <p class="mb-16 font-mono italic">— No articles, yet.</p>
-    )
-  }
+  <ul class="mb-16 ml-list list-disc font-bai-jamjuree">
+    {
+      allPosts.length > 0 ? (
+        allPosts.map((post: any) => (
+          <li class="mb-8">
+            <a href={`/blog/${getFileName(post.url)}`}>{post.frontmatter.title}</a>
+          </li>
+        ))
+      ) : (
+        <p class="mb-16 font-mono italic">— No articles, yet.</p>
+      )
+    }
+  </ul>
   <p>
     In the meantime, you can visit <a href="https://rootenginear.gitbook.io/blog/"
       >the old blog here</a
