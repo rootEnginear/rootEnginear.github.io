@@ -31,7 +31,7 @@
   });
 </script>
 
-<div class="flex items-baseline gap-8 flex-row-reverse">
+<div class="flex items-baseline gap-8 flex-row-reverse flex-wrap-reverse">
   <span class="text-xl font-bold">🪑</span>
   <button
     class={clsx([
