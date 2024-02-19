@@ -7,19 +7,23 @@ import { Prism } from "@astrojs/prism";
 
 export const frontmatter = {
   title: "รีวิวการใช้ Qwik กับโปรเจกต์ Senate ของ WeVis",
+  description:
+    "มารีวิวกันว่าการใช้ Qwik ในโปรเจกต์ Senate ของ WeVis ที่ผ่านมาเป็นอย่างไรบ้าง มีจุดแข็ง/จุดอ่อน ชอบ/ไม่ชอบอะไรบ้าง",
   date: "2022-09-22T00:00:00.000Z",
+  headerForeground: "/blog/senate-qwik-review/header-front.webp",
+  headerBackground: "/blog/senate-qwik-review/header-back.webp",
 };
 ---
 
 <BlogLayout
   title={frontmatter.title}
-  description="มารีวิวกันว่าการใช้ Qwik ในโปรเจกต์ Senate ของ WeVis ที่ผ่านมาเป็นอย่างไรบ้าง มีจุดแข็ง/จุดอ่อน ชอบ/ไม่ชอบอะไรบ้าง"
+  description={frontmatter.description}
   ogPath="/blog/senate-qwik-review/og.jpg"
   lang="th-TH"
-  date="2022-09-22T00:00:00.000Z"
+  date={frontmatter.date}
   headerTitle={frontmatter.title.replace("โปรเจกต์", "โปร⁠เจ⁠กต์")}
-  headerForeground="/blog/senate-qwik-review/header-front.webp"
-  headerBackground="/blog/senate-qwik-review/header-back.webp"
+  headerForeground={frontmatter.headerForeground}
+  headerBackground={frontmatter.headerBackground}
 >
   <p>
     <a href="https://wevis.info/senate" target="_blank" rel="nofollow noopener noreferrer"

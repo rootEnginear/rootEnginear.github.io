@@ -1,7 +1,6 @@
 .blog-title {
-  @apply text-4xl/[1.6] md:text-5xl/[1.6];
+  @apply text-balance text-4xl/[1.6] md:text-5xl/[1.6];
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
-  text-wrap: balance;
 }
 
 .blog-content h2 {
@@ -48,4 +47,8 @@ code[class*="language-"] {
 .blog-content kbd {
   @apply relative -top-1 inline-flex items-center justify-center rounded-4 border border-gray-700 bg-gray-950 px-4 py-1 font-mono text-sm text-gray-200 shadow-gray-950;
   box-shadow: 0 1px 0 1px var(--tw-shadow-color);
+}
+
+.blog-content details kbd {
+  @apply bg-gray-900 shadow-gray-900;
 }

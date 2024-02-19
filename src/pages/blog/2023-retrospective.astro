@@ -5,20 +5,24 @@ import Chart from "@/components/blog/2023-retro/Chart.svelte";
 
 export const frontmatter = {
   title: "2023 Retrospective",
+  description: "มาสรุปกันว่าปี 2023 ของเราเป็นยังไงบ้าง",
   date: "2024-01-14T00:00:00.000Z",
+  headerBackground: "/blog/2023-retro/header-back.webp",
+  headerForeground: "/blog/2023-retro/header-front.webp",
+  fullHeaderFg: true,
 };
 ---
 
 <BlogLayout
   title={frontmatter.title}
-  description="มาสรุปกันว่าปี 2023 ของเราเป็นยังไงบ้าง"
+  description={frontmatter.description}
   ogPath="/blog/2023-retro/og.jpg"
   lang="th-TH"
-  date="2024-01-14T00:00:00.000Z"
+  date={frontmatter.date}
   headerTitle="2023 Retrospective"
-  headerBackground="/blog/2023-retro/header-back.webp"
-  headerForeground="/blog/2023-retro/header-front.webp"
-  fullHeaderFg
+  headerBackground={frontmatter.headerBackground}
+  headerForeground={frontmatter.headerForeground}
+  fullHeaderFg={frontmatter.fullHeaderFg}
   reversed
 >
   <p>

@@ -9,9 +9,7 @@ import Education from "@/components/index/Education.astro";
 import RandomFacts from "@/components/index/RandomFacts.astro";
 ---
 
-<Layout
-  marginTop
->
+<Layout marginTop>
   <nav slot="secondary-nav" class="flex flex-1 flex-col items-end md:justify-end">
     <div class="w-max bg-gray-900 text-xs text-gray-400 md:order-2 md:text-sm">
       headings
@@ -41,4 +39,16 @@ import RandomFacts from "@/components/index/RandomFacts.astro";
   <SideProjects />
   <Education />
   <RandomFacts />
+
+  <link
+    data-lazy-font
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Bai+Jamjuree:wght@500&display=swap"
+    rel="stylesheet"
+  />
+  <noscript>
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Bai+Jamjuree:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </noscript>
 </Layout>

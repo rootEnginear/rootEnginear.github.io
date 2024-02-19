@@ -1,8 +1,11 @@
 ---
 import "@/styles/blog.css";
-import Root from "./Root.astro";
+import clsx from "clsx";
+
+import AppMainNav from "@/components/AppMainNav.astro";
 import BlogHeader from "@/components/BlogHeader.svelte";
 import BlogSharer from "@/components/BlogSharer.svelte";
+import Root from "./Root.astro";
 
 export interface Props {
   title: string;
@@ -33,6 +36,8 @@ const {
   reversed,
   class: className,
 } = Astro.props;
+
+const isThai = lang === "th-TH";
 ---
 
 <Root title={title} description={description} ogPath={ogPath} lang={lang}>
@@ -43,20 +48,17 @@ const {
       <div class="w-max bg-gray-900 text-xs text-gray-400 md:ml-auto md:text-sm">
         main navigation
       </div>
-      <menu class="text-sm md:text-base">
-        <li class="w-max bg-gray-900 md:ml-auto"><a href="/">Home</a></li>
-        <li class="w-max bg-gray-900 md:ml-auto"><a href="/blog">Blog</a></li>
-        <li class="w-max bg-gray-900 md:ml-auto">
-          <a href="#side-projects">Projects</a>
-        </li>
-      </menu>
+      <AppMainNav />
     </nav>
     <slot name="secondary-nav" />
   </div>
 
   <main
-    class={"blog-content m-auto max-w-[80ch] p-16 font-bai-jamjuree leading-[1.7] md:mt-[--nav-height] lg:mt-64 " +
-      className}
+    class={clsx(
+      "blog-content m-auto max-w-[80ch] p-16 leading-[1.7] md:mt-[--nav-height] lg:mt-64",
+      isThai && "font-bai-jamjuree",
+      className
+    )}
   >
     <BlogHeader
       title={headerTitle}
@@ -78,16 +80,22 @@ const {
     >
   </footer>
 
-  <link
-    data-lazy-font
-    href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;700&display=swap"
-    rel="stylesheet"
-    media="print"
-  />
-  <noscript>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-  </noscript>
+  {
+    isThai && (
+      <>
+        <link
+          data-lazy-font
+          href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;700&display=swap"
+          rel="stylesheet"
+          media="print"
+        />
+        <noscript>
+          <link
+            href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;700&display=swap"
+            rel="stylesheet"
+          />
+        </noscript>
+      </>
+    )
+  }
 </Root>

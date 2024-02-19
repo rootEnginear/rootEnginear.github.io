@@ -6,7 +6,7 @@ let allPosts: AstroInstance[] = [];
 try {
   allPosts = (await Astro.glob("./blog/*.astro")).sort(
     (aPost: any, zPost: any) =>
-      new Date(zPost.frontmatter.date) - new Date(aPost.frontmatter.date)
+      +new Date(zPost.frontmatter.date) - +new Date(aPost.frontmatter.date)
   );
 } catch (e) {}
 
