@@ -1,0 +1,63 @@
+---
+import sanitizeHtml from "sanitize-html";
+
+export interface Props {
+  title: string;
+  description: string;
+  date: string;
+  headerBackground: string;
+  headerForeground?: string;
+  href: string;
+}
+
+const { title, description, date, headerBackground, headerForeground, href } =
+  Astro.props;
+---
+
+<article class="gap-16 pb-16 xl:flex">
+  <a
+    class="group mb-8 block aspect-video h-auto w-full max-w-[250px] flex-none overflow-hidden rounded-16 xl:mb-0"
+    {href}
+    target="_blank"
+    rel="nofollow noopener noreferrer"
+    aria-hidden="true"
+  >
+    <img
+      class="absolute left-0 top-0 h-full w-full transform-gpu object-cover transition-transform duration-300 ease-out group-hover:scale-105"
+      src={headerBackground}
+      alt=""
+      width="250"
+      height="140.625"
+      loading="eager"
+      decoding="async"
+    />
+    {
+      headerForeground && (
+        <img
+          class="absolute left-0 top-0 h-full w-full transform-gpu object-cover transition-transform duration-300 group-hover:scale-110"
+          src={headerForeground}
+          alt=""
+          width="250"
+          height="140.625"
+          loading="eager"
+          decoding="async"
+        />
+      )
+    }
+  </a>
+  <div class="flex-1">
+    <h5 class="text-balance font-medium">
+      <a {href} target="_blank" rel="nofollow noopener noreferrer"
+        >{title.replace("โปรเจกต์", "โปร⁠เจ⁠กต์")}</a
+      >
+    </h5>
+    <p class="mb-4 text-balance text-sm leading-normal">
+      {description.replace("โปรเจกต์", "โปร⁠เจ⁠กต์")}
+    </p>
+    <footer class="text-xs">
+      — <time datetime={new Date(date).toISOString()}
+        >{new Date(date).toLocaleDateString("en-GB", { dateStyle: "short" })}</time
+      >
+    </footer>
+  </div>
+</article>

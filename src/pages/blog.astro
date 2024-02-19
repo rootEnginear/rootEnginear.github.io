@@ -1,6 +1,7 @@
 ---
 import type { AstroInstance } from "astro";
 import Layout from "@/layouts/Layout.astro";
+import BlogCard from "@/components/BlogCard.astro";
 
 let allPosts: AstroInstance[] = [];
 try {
@@ -18,19 +19,23 @@ const getFileName = (url: string | undefined) => {
 
 <Layout title="Blog" description="">
   <h2 class="mb-16 text-4xl font-bold">Articles</h2>
-  <ul class="mb-16 ml-list list-disc font-bai-jamjuree">
-    {
-      allPosts.length > 0 ? (
-        allPosts.map((post: any) => (
-          <li class="mb-8">
-            <a href={`/blog/${getFileName(post.url)}`}>{post.frontmatter.title}</a>
-          </li>
-        ))
-      ) : (
-        <p class="mb-16 font-mono italic">— No articles, yet.</p>
+  {
+    allPosts.map(
+      ({
+        url,
+        frontmatter: { title, description, date, headerBackground, headerForeground },
+      }: any) => (
+        <BlogCard
+          href={`/blog/${getFileName(url)}`}
+          {title}
+          {description}
+          {date}
+          {headerBackground}
+          {headerForeground}
+        />
       )
-    }
-  </ul>
+    )
+  }
   <p>
     In the meantime, you can visit <a href="https://rootenginear.gitbook.io/blog/"
       >the old blog here</a
@@ -39,13 +44,13 @@ const getFileName = (url: string | undefined) => {
 
   <link
     data-lazy-font
-    href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500&display=swap"
     rel="stylesheet"
     media="print"
   />
   <noscript>
     <link
-      href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500&display=swap"
       rel="stylesheet"
     />
   </noscript>
