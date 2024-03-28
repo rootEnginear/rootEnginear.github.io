@@ -2,8 +2,6 @@ import sitemap from "@astrojs/sitemap";
 import svelte from "@astrojs/svelte";
 import tailwind from "@astrojs/tailwind";
 import qwikdev from "@qwikdev/astro";
-import Compress from "astro-compress";
-import Critters from "astro-critters";
 import { defineConfig } from "astro/config";
 
 // https://astro.build/config
@@ -23,8 +21,8 @@ export default defineConfig({
         "https://rootenginear.github.io/my-common-patterns",
       ],
     }),
-    Critters(),
-    Compress({
+    (await import("astro-critters")).default(),
+    (await import("compress-astro")).default({
       HTML: {
         "html-minifier-terser": {
           collapseWhitespace: true,
