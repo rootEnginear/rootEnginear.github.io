@@ -1,9 +1,7 @@
 ---
-import "@/styles/prism-xonokai.css";
-
 import BlogLayout from "@/layouts/BlogLayout.astro";
 
-import { Prism } from "@astrojs/prism";
+import { Code } from 'astro:components';
 
 export const frontmatter = {
   title: "รีวิวการใช้ Qwik กับโปรเจกต์ Senate ของ WeVis",
@@ -63,8 +61,9 @@ export const frontmatter = {
 
   <p>เนื่องจากวันนี้เราไม่ได้มา Tutorial เราจะยกตัวอย่างง่ายๆ ด้วย Counter ก็พอ</p>
 
-  <Prism
+  <Code
     lang="tsx"
+    theme="aurora-x"
     code={`import { component$, useSignal } from '@builder.io/qwik';
 
 export const Counter = component$(() => {
@@ -119,8 +118,9 @@ export const Counter = component$(() => {
     > มาใช้
   </p>
 
-  <Prism
+  <Code
     lang="tsx"
+    theme="aurora-x"
     code={`/* eslint-disable qwik/no-react-props */
 /** @jsxImportSource react */
 import { qwikify$ } from '@builder.io/qwik-react';

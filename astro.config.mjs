@@ -35,4 +35,9 @@ export default defineConfig({
       Image: false,
     }),
   ],
+  markdown: {
+    shikiConfig: {
+      theme: "aurora-x",
+    },
+  },
 });

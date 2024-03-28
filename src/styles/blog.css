@@ -27,13 +27,8 @@
   @apply border-l-2 border-l-gray-700 py-8 pl-16;
 }
 
-code[class*="language-"],
-pre[class*="language-"] {
-  @apply rounded-4 border-none p-0 font-mono;
-}
-
-code[class*="language-"] {
-  @apply p-16;
+.blog-content .astro-code {
+  @apply rounded-4 p-16 font-mono text-sm;
 }
 
 .blog-content > *:not(header):not(:last-child) {

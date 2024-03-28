@@ -29,7 +29,7 @@
     --nav-height: 152px;
   }
 
-  code {
+  *:not(.astro-code) > code {
     @apply rounded-4 bg-gray-950 px-4 py-2 text-sm text-accent;
   }
 
