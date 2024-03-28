@@ -12,6 +12,10 @@ export interface Props {
 const { title, description, src, website, github } = Astro.props;
 
 const masterUrl = website || github;
+const sanitizedTitle = sanitizeHtml(title, {
+  allowedTags: [],
+  allowedAttributes: {},
+})
 ---
 
 <article class="gap-16 border-l-2 border-l-gray-700 py-8 pl-16 xl:flex">
@@ -20,6 +24,7 @@ const masterUrl = website || github;
     href={masterUrl}
     target="_blank"
     rel="nofollow noopener noreferrer"
+    aria-label={sanitizedTitle}
   >
     <img
       class="inline-block aspect-video h-auto w-full max-w-[400px] rounded-8 object-cover md:max-w-[250px]"
@@ -29,10 +34,7 @@ const masterUrl = website || github;
       height="140.625"
       loading="lazy"
       decoding="async"
-      title={sanitizeHtml(title, {
-        allowedTags: [],
-        allowedAttributes: {},
-      })}
+      title={sanitizedTitle}
     />
   </a>
   <div class="flex-1">
