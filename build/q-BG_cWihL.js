@@ -1,1 +1,1 @@
-import{$ as o}from"./q-CNYG0rzL.js";const r=()=>{const[r]=o();return r()};export{r as s_n8yYmGskREE};
+import{$ as o}from"./q-CNYG0rzL.js";const r=()=>{const[t]=o();return t()};export{r as s_n8yYmGskREE};
