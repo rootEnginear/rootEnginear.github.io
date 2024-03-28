@@ -18,7 +18,6 @@
     "astro": "^4.5.10",
     "astro-critters": "^2.1.6",
     "clsx": "^2.1.0",
-    "compress-astro": "^0.0.1",
     "d3-scale": "^4.0.2",
     "echarts": "^5.5.0",
     "motion": "^10.17.0",

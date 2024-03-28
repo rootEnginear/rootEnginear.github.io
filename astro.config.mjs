@@ -20,16 +20,6 @@ export default defineConfig({
       ],
     }),
     (await import("astro-critters")).default(),
-    (await import("compress-astro")).default({
-      HTML: {
-        "html-minifier-terser": {
-          collapseWhitespace: true,
-          removeComments: true,
-          removeRedundantAttributes: true,
-        },
-      },
-      Image: false,
-    }),
   ],
   markdown: {
     shikiConfig: {
