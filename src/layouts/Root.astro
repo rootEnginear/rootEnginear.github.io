@@ -2,9 +2,9 @@
 import "@/styles/base.css";
 import { DESCRIPTION, TITLE, OG_PATH, LANG } from "@/data/defaults";
 
-import AppLenis from "@/components/AppLenis.svelte";
-import AppLoadFont from "@/components/AppLoadFont.svelte";
-import AppMouse from "@/components/AppMouse.svelte";
+import AppLenis from "@/components/AppLenis";
+import AppLoadFont from "@/components/AppLoadFont";
+import AppMouse from "@/components/AppMouse";
 
 export interface Props {
   title?: string;
@@ -69,9 +69,9 @@ const {
   </head>
 
   <body>
-    <AppLenis client:load />
-    <AppLoadFont client:idle />
-    <AppMouse client:idle />
+    <AppLenis />
+    <AppLoadFont />
+    <AppMouse />
 
     <slot />
 

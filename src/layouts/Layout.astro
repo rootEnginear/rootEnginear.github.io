@@ -1,8 +1,8 @@
 ---
 import { clsx } from "clsx";
 
-import App3d from "@/components/App3d.svelte";
-import AppEmail from "@/components/AppEmail.svelte";
+import App3d from "@/components/App3d";
+import AppEmail from "@/components/AppEmail";
 import AppMainNav from "@/components/AppMainNav.astro";
 import Root from "./Root.astro";
 
@@ -44,11 +44,11 @@ const { title, description, marginTop } = Astro.props;
         >
       </p>
     </div>
-    <App3d client:idle />
+    <App3d />
     <div>
       <ul class="text-sm md:text-base">
         <li>Bangkok, Thailand</li>
-        <li><AppEmail client:visible /></li>
+        <li><AppEmail /></li>
         <li>
           <a
             href="https://github.com/rootEnginear"

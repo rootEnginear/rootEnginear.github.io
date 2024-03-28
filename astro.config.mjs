@@ -1,5 +1,4 @@
 import sitemap from "@astrojs/sitemap";
-import svelte from "@astrojs/svelte";
 import tailwind from "@astrojs/tailwind";
 import qwikdev from "@qwikdev/astro";
 import { defineConfig } from "astro/config";
@@ -8,7 +7,6 @@ import { defineConfig } from "astro/config";
 export default defineConfig({
   site: "https://rootenginear.github.io",
   integrations: [
-    svelte(),
     qwikdev(),
     tailwind({
       applyBaseStyles: false,

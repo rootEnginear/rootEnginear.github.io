@@ -3,8 +3,8 @@ import "@/styles/blog.css";
 import clsx from "clsx";
 
 import AppMainNav from "@/components/AppMainNav.astro";
-import BlogHeader from "@/components/BlogHeader.svelte";
-import BlogSharer from "@/components/BlogSharer.svelte";
+import BlogHeader from "@/components/BlogHeader";
+import BlogSharer from "@/components/BlogSharer";
 import Root from "./Root.astro";
 
 export interface Props {
@@ -66,12 +66,11 @@ const isThai = lang === "th-TH";
       fgUrl={headerForeground}
       {fullHeaderFg}
       {reversed}
-      client:idle
     />
 
     <slot />
 
-    <BlogSharer title={title} date={date} client:visible />
+    <BlogSharer title={title} date={date} />
   </main>
 
   <footer class="my-32 max-w-[80ch] px-16 md:mx-auto md:mb-[30vh] md:px-32 xl:mb-[20vh]">
