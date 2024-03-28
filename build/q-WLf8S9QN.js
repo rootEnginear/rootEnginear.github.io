@@ -1,0 +1,1 @@
+import{$ as T}from"./q-CNYG0rzL.js";import{w as _}from"./q-CNYG0rzL.js";import{_auto_THROTTLE_TIME as r}from"./q-DhQBqG0f.js";const f=u=>{const[e,a,s,l,t,o]=T();s.value&&(e.value?(e.value=!1,l.value||(l.value=!0),o(u),setTimeout(()=>{e.value=!0,a.value&&clearTimeout(a.value),a.value=setTimeout(()=>{o(t.value)},r)},r)):t.value=u)};export{_ as _hW,f as s_gufuT0t2rFg};

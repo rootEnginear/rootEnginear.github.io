@@ -1,0 +1,1 @@
+import{$ as r}from"./q-CNYG0rzL.js";const a=()=>{const[s,o]=r();return o(s)};export{a as s_V15fu3LTGHg};

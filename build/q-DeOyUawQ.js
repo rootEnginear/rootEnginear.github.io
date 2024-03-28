@@ -1,0 +1,1 @@
+import{$ as t}from"./q-CNYG0rzL.js";import{w as n}from"./q-CNYG0rzL.js";const i=()=>{const[e,o]=t();navigator.clipboard.writeText(o.value).then(()=>{e.value="Copied"},()=>{e.value="Failed, Try Again"}).finally(()=>{setTimeout(()=>{e.value="Copy URL"},1e3)})};export{n as _hW,i as s_Cn05iLUFmg4};

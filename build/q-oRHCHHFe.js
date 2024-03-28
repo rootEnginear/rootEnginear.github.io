@@ -1,0 +1,1 @@
+import{$ as o}from"./q-CNYG0rzL.js";const s=()=>{const[s]=o();return s()};export{s as s_9IO3QGK4WBI};
