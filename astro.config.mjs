@@ -1,6 +1,7 @@
 import sitemap from "@astrojs/sitemap";
 import svelte from "@astrojs/svelte";
 import tailwind from "@astrojs/tailwind";
+import qwikdev from "@qwikdev/astro";
 import Compress from "astro-compress";
 import Critters from "astro-critters";
 import { defineConfig } from "astro/config";
@@ -10,10 +11,9 @@ export default defineConfig({
   site: "https://rootenginear.github.io",
   integrations: [
     svelte(),
+    qwikdev(),
     tailwind({
-      config: {
-        applyBaseStyles: false,
-      },
+      applyBaseStyles: false,
     }),
     sitemap({
       customPages: [

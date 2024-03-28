@@ -10,28 +10,31 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/prism": "^2.1.2",
-    "@astrojs/sitemap": "^1.2.2",
-    "@astrojs/svelte": "^2.1.0",
-    "@astrojs/tailwind": "^3.1.1",
-    "@studio-freight/lenis": "^1.0.27",
-    "astro": "^2.1.0",
-    "astro-compress": "^2.2.3",
-    "astro-critters": "^2.0.11",
-    "clsx": "^1.2.1",
+    "@astrojs/prism": "^3.0.0",
+    "@astrojs/sitemap": "^3.1.2",
+    "@astrojs/svelte": "^5.2.0",
+    "@astrojs/tailwind": "^5.1.0",
+    "@builder.io/qwik": "^1.5.1",
+    "@qwikdev/astro": "^0.5.13",
+    "@studio-freight/lenis": "^1.0.42",
+    "astro": "^4.5.10",
+    "astro-compress": "^2.2.20",
+    "astro-critters": "^2.1.6",
+    "clsx": "^2.1.0",
     "d3-scale": "^4.0.2",
-    "echarts": "^5.4.3",
-    "motion": "^10.15.5",
-    "sanitize-html": "^2.10.0",
-    "svelte": "^3.54.0",
-    "tailwindcss": "^3.4.1",
-    "three": "^0.151.3"
+    "echarts": "^5.5.0",
+    "motion": "^10.17.0",
+    "sanitize-html": "^2.13.0",
+    "svelte": "^4.2.12",
+    "tailwindcss": "^3.4.3",
+    "three": "^0.151.3",
+    "typescript": "^5.4.3"
   },
   "devDependencies": {
-    "@types/d3-scale": "^4.0.3",
-    "@types/sanitize-html": "^2.9.0",
-    "@types/three": "^0.150.1",
-    "prettier": "^2.8.7",
-    "prettier-plugin-tailwindcss": "^0.2.7"
+    "@types/d3-scale": "^4.0.8",
+    "@types/sanitize-html": "^2.11.0",
+    "@types/three": "^0.150.2",
+    "prettier": "^2.8.8",
+    "prettier-plugin-tailwindcss": "^0.2.8"
   }
 }
