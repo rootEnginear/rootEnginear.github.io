@@ -39,7 +39,7 @@ const App3d = component$(() => {
 
       let loader = new GLTFLoader();
       let platonicSolids: any | undefined;
-      const material = new THREE.MeshBasicMaterial({ color: 0xe34234, wireframe: true });
+      const material = new THREE.MeshBasicMaterial({ color: 0xcc3b3b, wireframe: true });
 
       loader.load("/model/geo.glb", function (gltf) {
         const model = gltf.scene;
