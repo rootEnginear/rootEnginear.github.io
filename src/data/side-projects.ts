@@ -4,7 +4,7 @@ export const SIDE_PROJECTS = [
     description:
       "Better Than Adventure (BTA) is a popular Minecraft mod that depicts what Minecraft would be like if the adventure update didn't take place. I mod it further with new features and fun stuff for players to enjoy.",
     src: "/img/projects/bta-mods.webp",
-    website: "https://bta-modding.nouma-vallee.fr/user/rootEnginear",
+    website: "https://rootenginear.github.io/bta-mods",
     github: "https://github.com/rootEnginear/bta-rootenginear-mods",
   },
   {
