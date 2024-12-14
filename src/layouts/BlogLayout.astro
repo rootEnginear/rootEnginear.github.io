@@ -42,10 +42,10 @@ const isThai = lang === "th-TH";
 
 <Root title={title} description={description} ogPath={ogPath} lang={lang}>
   <div
-    class="sticky top-0 z-10 -mt-16 flex justify-between p-16 md:fixed md:inset-0 md:left-auto md:mt-0 md:flex-col md:p-32"
+    class="sticky top-0 z-10 -mt-16 pointer-events-none flex justify-between p-16 md:fixed md:inset-0 md:left-auto md:mt-0 md:flex-col md:p-32"
   >
     <nav class="flex-1">
-      <div class="w-max bg-gray-900 text-xs text-gray-400 md:ml-auto md:text-sm">
+      <div class="pointer-events-auto w-max bg-gray-900 text-xs text-gray-400 md:ml-auto md:text-sm">
         main navigation
       </div>
       <AppMainNav />

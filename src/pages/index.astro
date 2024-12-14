@@ -1,34 +1,34 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 
-import Skills from "@/components/index/Skills.astro";
-import Experiences from "@/components/index/Experiences.astro";
 import Achievements from "@/components/index/Achievements.astro";
-import SideProjects from "@/components/index/SideProjects.astro";
 import Education from "@/components/index/Education.astro";
+import Experiences from "@/components/index/Experiences.astro";
 import RandomFacts from "@/components/index/RandomFacts.astro";
+import SideProjects from "@/components/index/SideProjects.astro";
+import Skills from "@/components/index/Skills.astro";
 ---
 
 <Layout marginTop>
   <nav slot="secondary-nav" class="flex flex-1 flex-col items-end md:justify-end">
-    <div class="w-max bg-gray-900 text-xs text-gray-400 md:order-2 md:text-sm">
+    <div class="pointer-events-auto w-max bg-gray-900 text-xs text-gray-400 md:order-2 md:text-sm">
       headings
     </div>
     <menu class="text-sm md:text-base">
       <li class="ml-auto w-max bg-gray-900">
-        <a href="#technological-skills">Technological Skills</a>
+        <a class="pointer-events-auto" href="#technological-skills">Technological Skills</a>
       </li>
       <li class="ml-auto w-max bg-gray-900">
-        <a href="#work-experiences">Work Experiences</a>
+        <a class="pointer-events-auto" href="#work-experiences">Work Experiences</a>
       </li>
       <li class="ml-auto w-max bg-gray-900">
-        <a href="#achievements">Achievements</a>
+        <a class="pointer-events-auto" href="#achievements">Achievements</a>
       </li>
       <li class="ml-auto w-max bg-gray-900">
-        <a href="#side-projects">Side Projects</a>
+        <a class="pointer-events-auto" href="#side-projects">Side Projects</a>
       </li>
       <li class="ml-auto w-max bg-gray-900">
-        <a href="#education">Education</a>
+        <a class="pointer-events-auto" href="#education">Education</a>
       </li>
     </menu>
   </nav>
