@@ -56,6 +56,10 @@
   .geo-canvas {
     image-rendering: pixelated;
   }
+
+  .list-circle {
+    list-style-type: circle;
+  }
 }
 
 @tailwind utilities;

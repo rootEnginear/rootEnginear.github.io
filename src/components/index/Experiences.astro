@@ -1,5 +1,6 @@
 ---
 import ProjectCard from "@/components/ProjectCard.astro";
+import ManualProjectCard from "../ManualProjectCard.astro";
 ---
 
 <section
@@ -23,8 +24,45 @@ import ProjectCard from "@/components/ProjectCard.astro";
       >&nbsp;&ndash;&nbsp;<span>Present</span>
     </p>
     <ul class="mb-4 ml-list list-disc marker:text-accent">
-      <li>Recently hired! Stay tuned!</li>
+      <li>Work with project managers to identify and address any project challenges, keeping things running smoothly</li>
+      <li>Partner with designers to align on our vision and ensure seamless implementation</li>
+      <li>Engage with everyone (from my teammates to the big boss!) to discuss progress and maintain open lines of communication</li>
+      <li>Exchange insights and best practices with fellow developers, fostering a culture of continuous learning and improvement</li>
     </ul>
+    <section>
+      <h4 class="mb-4 text-lg font-medium">Projects:</h4>
+      <!-- <ManualProjectCard
+        title="SKYLLER Drone Delivery Service"
+        src="TODO"
+        website="TODO"
+      >
+        <ul class="mb-4 ml-list list-circle text-sm leading-normal marker:text-accent">
+          <li>Develop a real-time flight data management and dashboard for a drone delivery system</li>
+          <li>Integrate flight data and live location updates from drone-mounted microcontroller</li>
+        </ul>
+      </ManualProjectCard> -->
+      <ManualProjectCard
+        title="Bangkok Open Policy"
+        src="https://openpolicy.bangkok.go.th/og-image.png"
+        website="https://openpolicy.bangkok.go.th/"
+      >
+        <!-- A website that gathers information and progress of Bangkok's policies, revealing work transparently. It allows the public to follow, check, and contribute ideas at every step, because a good city starts with policies where everyone participates. -->
+        <ul class="mb-4 ml-list list-circle text-sm leading-normal marker:text-accent">
+          <li>Advise teammates on designing specific web animations</li>
+          <li>Code sankey diagram animation and overview page of the website</li>
+        </ul>
+      </ManualProjectCard>
+      <!-- <ManualProjectCard
+        title="CollabiQ"
+        src="TODO"
+        website="TODO"
+      >
+        <ul class="mb-4 ml-list list-circle text-sm leading-normal marker:text-accent">
+          <li>Advise teammates on designing specific web motions/animations</li>
+          <li>Contribute to coding the role section of the website</li>
+        </ul>
+      </ManualProjectCard> -->
+    </section>
   </article>
 
   <article class="mb-16">
