@@ -1,7 +1,7 @@
 ---
-import type { AstroInstance } from "astro";
-import Layout from "@/layouts/Layout.astro";
 import BlogCard from "@/components/BlogCard.astro";
+import Layout from "@/layouts/Layout.astro";
+import type { AstroInstance } from "astro";
 
 let allPosts: AstroInstance[] = [];
 try {
@@ -36,11 +36,6 @@ const getFileName = (url: string | undefined) => {
       )
     )
   }
-  <p>
-    In the meantime, you can visit <a href="https://rootenginear.gitbook.io/blog/"
-      >the old blog here</a
-    >.
-  </p>
 
   <link
     data-lazy-font
