@@ -16,11 +16,11 @@ export const SIDE_PROJECTS = [
     github: "https://github.com/rootEnginear/tpc-course-planner",
   },
   {
-    title: "26<sup>th</sup> Parliament Meetings",
-    description: `A collection of meeting records from the 26<sup>th</sup> parliament. This solves the searching problem on the Parliament website, so you can find any meeting records faster.<br><span class="text-sm">Also see: <a href="https://rootenginear.github.io/25th-parliament-meeting" target="_blank" rel="nofollow noopener noreferrer">https://rootenginear.github.io/25th-parliament-meeting</a></span>`,
-    src: "/img/projects/25th-parliament-meetings.webp",
-    website: "https://rootenginear.github.io/26th-parliament-meeting",
-    github: "https://github.com/rootEnginear/26th-parliament-meeting",
+    title: "Saparchive",
+    description: `A collection of meeting records from the 25<sup>th</sup> and 26<sup>th</sup> parliament. This solves the searching problem on the Parliament website, so you can find any meeting records faster.`,
+    src: "/img/projects/saparchive.webp",
+    website: "https://saparchive-th.web.app",
+    github: "https://github.com/rootEnginear/saparchive",
   },
   {
     title: "My Common Patterns",
@@ -29,11 +29,4 @@ export const SIDE_PROJECTS = [
     website: "https://rootenginear.github.io/my-common-patterns",
     github: "https://github.com/rootEnginear/my-common-patterns",
   },
-  // {
-  //   title: "Libraries (that I have used) Review",
-  //   description:
-  //     "My subjective review on libraries I have used and what I have experienced from them.",
-  //   src: "./img/projects/lib-reviews.webp",
-  //   github: "https://github.com/rootEnginear/libraries-i-used-review",
-  // },
 ];
