@@ -17,7 +17,7 @@ export default defineConfig({
         "https://rootenginear.github.io/25th-parliament-meeting",
         "https://rootenginear.github.io/26th-parliament-meeting",
         "https://rootenginear.github.io/my-common-patterns",
-        "https://rootenginear.github.io/bta-mods",
+        "https://rootenginear.github.io/svelte-action-motionone",
       ],
     }),
     (await import("astro-critters")).default(),
