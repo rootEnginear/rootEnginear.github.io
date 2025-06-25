@@ -1,5 +1,5 @@
 {
-  "manifestHash": "syuq7v",
+  "manifestHash": "6k4akk",
   "symbols": {
     "s_0qZl8L940iI": {
       "origin": "components/BlogSharer.tsx",
@@ -160,7 +160,7 @@
       "captures": false,
       "loc": [
         311,
-        1634
+        1635
       ]
     },
     "s_oVHanNxWO2U": {
@@ -468,7 +468,7 @@
     "s_9NCUSlorKLw": "q-CicEtvzU.js",
     "s_Dhqc76r0xG8": "q-BoTmfzYF.js",
     "s_SQF81Z92tGM": "q-BQUB313R.js",
-    "s_kNGZFz30SKU": "q-Csoj93CR.js",
+    "s_kNGZFz30SKU": "q-DmXnci6h.js",
     "s_oVHanNxWO2U": "q-Uxmiam8f.js",
     "s_yD0t0gVm4ts": "q-O3AFCwpr.js",
     "s_4LgaVKttASo": "q-B8jyqdfR.js",
@@ -534,6 +534,18 @@
         "s_4LgaVKttASo"
       ]
     },
+    "q-Bedw0awr.js": {
+      "size": 334,
+      "imports": [
+        "q-CNYG0rzL.js"
+      ],
+      "dynamicImports": [
+        "q-DmXnci6h.js"
+      ],
+      "origins": [
+        "src/components/BlogHeader.tsx"
+      ]
+    },
     "q-Bg0sBsuM.js": {
       "size": 446,
       "imports": [
@@ -588,18 +600,6 @@
       ],
       "symbols": [
         "s_Dhqc76r0xG8"
-      ]
-    },
-    "q-BpFSbvLw.js": {
-      "size": 334,
-      "imports": [
-        "q-CNYG0rzL.js"
-      ],
-      "dynamicImports": [
-        "q-Csoj93CR.js"
-      ],
-      "origins": [
-        "src/components/BlogHeader.tsx"
       ]
     },
     "q-BqMDnx55.js": {
@@ -826,21 +826,6 @@
         "node_modules/.pnpm/@builder.io+qwik@1.5.1_undici@6.19.2/node_modules/@builder.io/qwik/core.min.mjs"
       ]
     },
-    "q-Csoj93CR.js": {
-      "size": 1128,
-      "imports": [
-        "q-CNYG0rzL.js"
-      ],
-      "dynamicImports": [
-        "q-CXcbzSue.js"
-      ],
-      "origins": [
-        "src/s_kngzfz30sku.js"
-      ],
-      "symbols": [
-        "s_kNGZFz30SKU"
-      ]
-    },
     "q-CUSFfR0j.js": {
       "size": 429,
       "imports": [
@@ -1006,6 +991,21 @@
       ],
       "origins": [
         "src/components/AppMouse.tsx"
+      ]
+    },
+    "q-DmXnci6h.js": {
+      "size": 1129,
+      "imports": [
+        "q-CNYG0rzL.js"
+      ],
+      "dynamicImports": [
+        "q-CXcbzSue.js"
+      ],
+      "origins": [
+        "src/s_kngzfz30sku.js"
+      ],
+      "symbols": [
+        "s_kNGZFz30SKU"
       ]
     },
     "q-DrnCouNp.js": {
