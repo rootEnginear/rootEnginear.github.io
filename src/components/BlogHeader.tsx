@@ -30,7 +30,7 @@ const BlogHeader = component$<BlogHeaderProps>(
 
     return (
       <header
-        class="-m-32 mb-32 h-[50vh] overflow-hidden rounded-16 bg-cover bg-center text-5xl font-black leading-normal"
+        class="-m-32 mb-32 h-[50svh] overflow-hidden rounded-16 bg-cover bg-center text-5xl font-black leading-normal"
         style={{
           backgroundImage: bgUrl ? `url(${bgUrl})` : "",
         }}

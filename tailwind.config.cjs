@@ -32,6 +32,7 @@ module.exports = {
       48: "48px",
       64: "64px",
       list: "2ch",
+      svh: "100svh",
     },
     colors: {
       transparent: "transparent",
