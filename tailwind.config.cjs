@@ -6,17 +6,17 @@ module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     fontFamily: {
-      sans: ["Space Grotesk Variable", "Bai Jamjuree", ...defaultTheme.fontFamily.sans],
-      serif: ["Space Grotesk Variable", "Bai Jamjuree", ...defaultTheme.fontFamily.serif],
-      mono: ["Jetbrains Mono", "Bai Jamjuree", ...defaultTheme.fontFamily.mono],
+      sans: ["Funnel Sans", "IBM Plex Sans Thai", ...defaultTheme.fontFamily.sans],
+      serif: ["Funnel Sans", "IBM Plex Sans Thai", ...defaultTheme.fontFamily.serif],
+      mono: ["Google Sans Code", "IBM Plex Sans Thai", ...defaultTheme.fontFamily.mono],
       "bai-jamjuree": [
-        "Space Grotesk Variable",
-        "Bai Jamjuree",
+        "Funnel Sans",
+        "IBM Plex Sans Thai",
         ...defaultTheme.fontFamily.sans,
       ],
       japanese: [
-        "Space Grotesk Variable",
-        "Bai Jamjuree",
+        "Funnel Sans",
+        "IBM Plex Sans Thai",
         '"M PLUS 1"',
         ...defaultTheme.fontFamily.sans,
       ],
