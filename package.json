@@ -35,10 +35,10 @@
   },
   "packageManager": "pnpm@8.7.1",
   "volta": {
-    "node": "20.9.0",
+    "node": "20.20.2",
     "pnpm": "8.7.1"
   },
   "engines": {
-    "node": "20"
+    "node": "20.20.2"
   }
 }
